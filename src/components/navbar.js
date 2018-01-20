@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from 'react-router-dom';
 
 const NavBar = ({update, click}) => {
 
@@ -19,14 +20,15 @@ update(data)
       <div className="navBurger fa fa-bars fa-3x" aria-hidden="true"
         onClick={burgerClick.bind(this, click)}
       ></div>
-      <div className="logo"><img className="logoImage" src="https://i.imgur.com/LJoHOxg.jpg" title="source: imgur.com" /></div>
+      <NavLink exact to="/" className="logo"><img className="logoImage" src="https://i.imgur.com/LJoHOxg.jpg" title="source: imgur.com" /></NavLink>
       <div className="navSlogan">Promoting Student Success</div>
       <div className="navWhiteSpace"></div>
-      <div className="navWorkShops graySwitch">Workshops</div>
-      <div className="navServices graySwitch">Services</div>
-      <div className="navResources graySwitch">Resources</div>
-      <div className="navAbout graySwitch">About</div>
+      <NavLink to="/workshops" className="navWorkShops graySwitch">Workshops</NavLink>
+      <NavLink to="/services" className="navServices graySwitch">Services</NavLink>
+      <NavLink to="/resources" className="navResources graySwitch">Resources</NavLink>
+      <NavLink to="/about" className="navAbout graySwitch">About</NavLink>
       <div className="navContact graySwitch">Contact</div>
+      <a target="_blank" href="https://www.collegeplannerpro.com/" className="navCurrentStudents graySwitch">Current Students</a>
     </div>
   )
 

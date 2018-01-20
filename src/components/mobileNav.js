@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const MobileNav = ({update, click}) => {
 
@@ -13,11 +14,12 @@ const burger = (data) => {
 
   return (
     <div className={burger(click)}>
-      <div className="mobileWorkshops">Workshops</div>
-      <div className="mobileServices">Services</div>
-      <div className="mobileResources">Resources</div>
-      <div className="mobileAbout">About</div>
-      <div className="mobileContact">Contact</div>
+      <a target="_blank" href="https://www.collegeplannerpro.com/" className="mobileCurrentStudents">Current Students</a>
+      <NavLink to="/workshops" className="mobileWorkshops">Workshops</NavLink>
+      <NavLink to="/services" className="mobileServices">Services</NavLink>
+      <NavLink to="/resources" className="mobileResources">Resources</NavLink>
+      <NavLink to="/about" className="mobileAbout">About</NavLink>
+      <a className="mobileContact">Contact</a>
     </div>
   )
 }

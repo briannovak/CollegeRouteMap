@@ -1,1355 +1,1181 @@
-@import url('https://fonts.googleapis.com/css?family=Arvo|Bitter|Crete+Round|Crimson+Text|Noticia+Text|Suez+One|Fira+Sans');
+@import url("https://fonts.googleapis.com/css?family=Arvo|Bitter|Crete+Round|Crimson+Text|Noticia+Text|Suez+One|Fira+Sans");
 
-@media only screen and (min-width:0px) and (max-width:320px) {
+@media only screen and (min-width: 0px) and (max-width: 320px) {
   .navbar {
-    display:grid;
-    width:100%;
-    position:fixed;
-    top:0;
-    grid-template-columns:10% 90%;
-    height:105px;
+    display: grid;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    grid-template-columns: 25% 75%;
+    height: 105px;
     background-color: white;
     border-bottom: 1px solid black;
-    z-index:20;
-  }
-  .logo, .navBurger{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .navBurger{
-    font-size:1.5em;
-    margin-left:40px;
+    z-index: 20;
   }
   .logo {
-    margin-top:2px;
-    margin-right:45px;
-    font-size:2.2em;
-  }
-  .navAbout, .navResources, .navWhiteSpace, .navWorkShops, .navContact, .navServices{
-    display:none;
-  }
-  .graySwitch:hover{
-    font-size:1.2em;
-    cursor:pointer;
-    color:white;
-    background-color: #D7D6D4;
-  }
-  .contact{
-    display:flex;
+    display: flex;
     justify-content: center;
     align-items: center;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
   }
-  .heroWrapper{
-    overflow: hidden;
-    min-height: 100px;
-    margin-top:-55px;
-    /*margin-top:-55px;*/
-  }
-  .heroWrapper img {
-    width:125%;
-    margin-top:-15px;
-    padding-top:40px;
-  }
-  .problemWrapper{
-    margin-top:5px;
-    /*border-top:1px solid black;*/
-    /*border-bottom: 1px solid black;*/
-    height:100vh;
-    min-height: 576px;
-    overflow:hidden;
-    background-color: white;
-    display:flex;
+  .navBurger {
+    display: flex;
     justify-content: center;
     align-items: center;
-    /*margin-bottom: 10px;*/
+    /*font-size:1.8em;*/
+    margin-left: 0px;
+    color: #170c6b;
   }
-  .problemSolution{
-    display:none;
-    display:grid;
-    grid-template-rows: 1fr 1fr;
+  .navBurger:hover {
+    /*font-size:3.8em;*/
+    color: white;
+    background-color: #990106;
+    cursor: pointer;
   }
-  .problemStatement{
-    display:none;
-    width: 93%;
-    height:90%;
-    border:1px solid black;
+  .navAbout,
+  .navResources,
+  .navWhiteSpace,
+  .navWorkShops,
+  .navContact,
+  .navServices,
+  .navCurrentStudents,
+  .navSlogan {
+    display: none;
   }
-  .solutionStatement{
-    display:none;
-    width:93%;
-    height:90%;
-    border:1px solid black;
+  .logo {
+    margin-top: 2px;
+    margin-right: 60px;
+    font-size: 2.2em;
   }
-  .exampleSolution{
-    display:grid;
-    grid-template-rows:42% 15% 35%;
-    border:1px solid black;
-    height:550px;
-    width:90%;
-    margin-top:25px;
+  .logo img:hover {
+    cursor: pointer;
   }
-  .studentData{
-    display:flex;
+  .logoImage {
+    display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
+    width: 140px;
+    margin-left: -10px;
+    z-index: 1;
+  }
+  .navAbout,
+  .navResources,
+  .navWhiteSpace,
+  .navWorkShops,
+  .navContact,
+  .navServices {
+    display: none;
+  }
+  .graySwitch:hover {
     font-size: 1.2em;
+    cursor: pointer;
+    color: white;
+    background-color: #d7d6d4;
   }
-  .exampleSolution div img{
-    height:225px;
-    border-radius: 50%;
-    display:block;
-    margin-top:20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top:8
-  }
-  .exampleTestimonial{
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    font-family: 'Bitter', serif;
-    margin-left:25px;
-    margin-right:15px;
-    font-size:1.5em;
-    height:100%;
-  }
-  .heroName{
-    display:flex;
-    position:relative;
-    top:175px;
-    left:10px;
-    font-size:1.9em;
-    z-index:19;
-    color:black;
-  }
-  .heroPartners{
-    display:flex;
-    position:relative;
-    top:182px;
-    left:50px;
-    font-size:1em;
-    z-index:18;
-    color:black;
-    width:60%;
-  }
-  .heroGraduates{
-    display:flex;
-    position:relative;
-    top:187px;
-    left:50px;
-    font-size:1em;
-    z-index:18;
-    color:black;
-    width:60%;
-  }
-  .heroContact{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position:relative;
-    top:210px;
-    left:63px;
-    height:50px;
-    width:150px;
-    background: blue;
-    color:white;
-    z-index:19;
-    font-size:1.3em;
-    border-radius:5px;
-  }
-  .heroContact:hover{
-    color:blue;
-    font-weight: bold;
-    background-color:white;
-    cursor:pointer;
-  }
-  .mobileNav{
-  margin-top:105px;
-  margin-bottom:-141px;
-  height:375px;
-  display:grid;
-  grid-template-rows:1fr;
-  padding-bottom:-75px;
-  width:100%;
-  }
-  .mobileNav div{
-  height:75px;
-  color:white;
-  border-bottom:1px solid black;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: gray;
-  padding-left:30px;
-  font-size:1.5em;
-  }
-  .contactWrapper{
-    display:grid;
-    grid-template-rows: 10% 90%;
-    height:91vh;
-    min-height: 650px;
-    margin-top:-10px;
-  }
-  .contactWrapperHeader {
-    display: grid;
-    grid-template-rows: 1fr;
-  }
-  .contactHeader {
-    width:100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size:3em;
-    margin-top:25px;
-  }
-  .contactThanks {
-    display:none !important;
-  }
-
-  .convertUser{
-    display: grid;
-    grid-template-rows: 1fr;
-    height:500px;
-  }
-  .contactForm {
-    background-color:#cccdce;
-    border-radius: 5px;
-    margin-left:15px;
-    margin-top:25px;
-    height:100%;
-    width:92%;
-  }
-  .inputForm{
-    display:grid;
-    grid-template-rows:10% 10% 10% 40%;
-    margin-top: 15px;
-  }
-  .inputName{
-    margin-left:10px;
-    margin-top:15px;
-    height:40px;
-    width:265px;
-    border-radius:2px;
-  }
-  .inputPhone, .inputEmail{
-    margin-top:25px;
-    margin-left:10px;
-    width:265px;
-    height:40px;
-    border-radius:2px;
-  }
-   .inputSend{
-     margin-top:15px;
-     margin-left:10px;
-     width:272px;
-     height:25px;
-     border-radius:2px;
-     background-color: white;
-   }
-  .inputTextArea{
-    margin-top:25px;
-    margin-left:10px;
-    width:265px;
-    height:200px;
-    border-radius:2px;
-  }
-  .contactDetails{
-    display:none;
-    border:1px solid black;
-    width:90%;
-    height:81.5%;
-    margin-top:25px;
-    margin-left:25px;
-    border-radius:5px;
-  }
-  .show{
-  display:grid;
-  }
-  .hide{
-  display:none;
-  }
-  }
-
-@media only screen and (min-width:321px) and (max-width:375px) {
-  .navbar {
-    display:grid;
-    width:100%;
-    position:fixed;
-    top:0;
-    grid-template-columns:20% 80%;
-    height:100px;
-    background-color: white;
+  .mobileNav a {
+    height: 75px;
+    color: #170c6b;
     border-bottom: 1px solid black;
-    z-index:20;
-  }
-  .logo, .navBurger{
-    display:flex;
-    justify-content: center;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
+    background-color: white;
+    padding-left: 30px;
+    font-size: 1.5em;
   }
-  .navBurger{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    /*margin-left:40px;*/
-    color:#170c6b;
+  .mobileNav a:hover {
+    font-size: 1.8em;
+    background-color: #990106;
+    color: white;
+    cursor: pointer;
   }
-  .navBurger:hover{
-    /*margin-left:40px;*/
-    cursor:pointer;
-    color:white;
-    background-color:#990106;
+  .mobileNav {
+    margin-top: 105px;
+    margin-bottom: -100px;
+    min-height: 375px;
+    max-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
   }
-  .logo{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size:2em;
-  }
-  .logoImage{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:150px;
-    margin-right:75px;
-    z-index:1
-  }
-  .logo img:hover{
-    cursor:pointer;
-  }
-  .navSlogan{
-    display:none;
-  }
-  .navAbout, .navResources, .navWhiteSpace, .navWorkShops, .navContact, .navServices{
-    display:none;
-  }
-  .contact{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .heroWrapper{
+  .heroWrapper {
     overflow: hidden;
-    max-height:100vh;
-    min-height: 750px;
-    background-image:url('https://i.imgur.com/TGlZESH.jpg');
-    width:100%;
-    height:100%;
+    max-height: 100vh;
+    min-height: 950px;
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    width: 100% !important;
+    height: 100%;
     background-position: top right -200px;
     background-repeat: no-repeat;
-    /*background-position-x:left 100px;*/
-    background-size:cover;
-
+    background-size: cover;
+    min-height: 500px;
+    margin-top: 100px;
   }
-  .problemWrapper{
-    margin-top:-25px;
-    /*border-top:1px solid black;
-    border-bottom: 1px solid black;*/
-    height:90vh;
-    min-height: 200px;
-    overflow:hidden;
-    background-color: white;
-    display:flex;
+  .heroPartners {
+    display: flex;
+    position: relative;
+    top: 40px;
+    left: 30px;
+    font-size: 1em;
+    z-index: 18;
+    color: black;
+    width: 220px;
+    font-size: 1.6em;
+  }
+  .heroContact {
+    display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .problemSolution{
-    display:none;
-    display:grid;
-    grid-template-rows: 1fr 1fr;
-  }
-  .problemStatement{
-    display:none;
-    width: 93%;
-    height:90%;
-    border:1px solid black;
-  }
-  .solutionStatement{
-    display:none;
-    width:93%;
-    height:90%;
-    border:1px solid black;
-  }
-  .exampleSolution{
-    display:grid;
-    grid-template-rows:47% 5% 40%;
-    border:1px solid black;
-    height:550px;
-    width:90%;
-    margin-top:25px;
-  }
-  .studentData{
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    font-size: 1.2em;
-  }
-  .exampleSolution div img{
-    height:225px;
-    border-radius: 50%;
-    display:block;
-    margin-top:20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top:8
-  }
-  .exampleTestimonial{
-    display:flex;
-    justify-content: center;
-    font-family: 'Bitter', serif;
-    align-items:center;
-    margin-left:25px;
-    margin-right:15px;
-    font-size:1.5em;
-  }
-  .heroName{
-    display:flex;
-    position:relative;
-    top:150px;
-    left:30px;
-    font-size:2em;
-    z-index:19;
-    color:black;
-  }
-  .heroPartners{
-    display:flex;
-    position:relative;
-    top:150px;
-    left:30px;
-    font-size:1.8em;
-    font-family:"Fira Sans", sans-serif;
-    z-index:18;
-    color:black;
-    width:250px;
-  }
-  .heroGraduates{
-    display:flex;
-    position:relative;
-    top:167px;
-    left:50px;
-    font-size:1.2em;
-    z-index:18;
-    color:black;
-    width:60%;
-  }
-  .heroContact{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-family:'Fira Sans', sans-serif;
-    position:relative;
-    top:190px;
-    left:75px;
-    height:50px;
-    width:150px;
+    position: relative;
+    font-family: "Fira Sans", sans-serif;
+    top: 80px;
+    left: 63px;
+    height: 50px;
+    width: 150px;
     background: white;
-    color:#170c6b;
-    z-index:19;
-    font-size:1.3em;
-    border-radius:5px;
-  }
-  .heroContact:hover{
-    color:white;
-    font-weight: bold;
-    font-family:'Fira Sans', sans-serif;
-    background-color:#990106;
-    cursor:pointer;
-    font-size:1.5em;
-  }
-
-  .mobileNav{
-  margin-top:100px;
-  margin-bottom:-126px;
-  height:375px;
-  display:grid;
-  grid-template-rows:1fr;
-  padding-bottom:-75px;
-  width:100%;
-  }
-  .mobileNav div{
-  height:75px;
-  color:#170c6b;
-  border-bottom:1px solid black;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: white;
-  padding-left:30px;
-  font-size:1.5em;
-  }
-  .mobileNav div:hover{
-    font-size:1.8em;
-    background-color:#990106;
-    color:white;
-    cursor:pointer;
-  }
-  .contactWrapper{
-    display:grid;
-    grid-template-rows: 10% 90%;
-    height:91vh;
-    min-height: 650px;
-  }
-  .contactWrapperHeader {
-    display: grid;
-    grid-template-rows: 1fr;
-  }
-  .contactHeader {
-    width:100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size:3em;
-    margin-top:25px;
-  }
-  .contactThanks {
-    display:none !important;
-  }
-
-  .convertUser{
-    display: grid;
-    grid-template-rows: 1fr;
-    height:500px;
-  }
-  .contactForm {
-    background-color:#cccdce;
+    color: #170c6b;
+    z-index: 19;
+    font-size: 1.3em;
     border-radius: 5px;
-    margin-left:30px;
-    margin-top:25px;
-    height:100%;
-    width:85%;
   }
-  .inputForm{
-    display:grid;
-    grid-template-rows:10% 10% 10% 40%;
-    margin-top: 15px;
-  }
-  .inputName{
-    margin-left:20px;
-    margin-top:15px;
-    height:40px;
-    width:275px;
-    border-radius:2px;
-  }
-  .inputPhone, .inputEmail{
-    margin-top:25px;
-    margin-left:20px;
-    width:275px;
-    height:40px;
-    border-radius:2px;
-  }
-   .inputSend{
-     margin-top:15px;
-     margin-left:20px;
-     width:282px;
-     height:25px;
-     border-radius:2px;
-     background-color: white;
-   }
-  .inputTextArea{
-    margin-top:25px;
-    margin-left:20px;
-    width:275px;
-    height:200px;
-    border-radius:2px;
-  }
-  .contactDetails{
-    display:none;
-    border:1px solid black;
-    width:90%;
-    height:81.5%;
-    margin-top:25px;
-    margin-left:25px;
-    border-radius:5px;
+  .heroContact:hover {
+    color: white;
+    font-weight: bold;
+    font-family: "Fira Sans", sans-serif;
+    background-color: #990106;
+    cursor: pointer;
+    font-size: 1.5em;
   }
 
-  .show{
-  display:grid;
-  }
-  .hide{
-  display:none;
-  }
-  }
-@media only screen and (min-width:376px) and (max-width: 598px) {
-  .navbar {
-    display:grid;
-    width:100%;
-    position:fixed;
-    top:0;
-    grid-template-columns:15% 85%;
-    height:100px;
-    background-color: white;
-    border-bottom: 1px solid black;
-    z-index:20;
-  }
-  .logo, .navBurger{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .navBurger{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    /*margin-left:40px;*/
-    color:#170c6b;
-  }
-  .navBurger:hover{
-    /*margin-left:40px;*/
-    cursor:pointer;
-    color:white;
-    background-color:#990106;
-  }
-  .logo {
-    margin-top:2px;
-    margin-right:80px;
-    font-size:2.2em;
-  }
-  .navAbout, .navResources, .navWhiteSpace, .navWorkShops, .navContact, .navServices{
-    display:none;
-  }
-  .contact{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .heroWrapper{
+  .middleWrapper {
+    display: grid;
+    grid-template-rows: 40% 60%;
+    width: 100%;
+    position: relative;
+    background: #5c97ff;
     overflow: hidden;
-    max-height:100vh;
-    min-height: 750px;
-    background-image:url('https://i.imgur.com/TGlZESH.jpg');
-    width:100% !important;
-    height:100%;
-    background-position: top right -200px;
-    background-repeat: no-repeat;
-    /*background-position-x:left 100px;*/
-    background-size:cover;
-  }
-  .problemWrapper{
-    /*border-bottom: 1px solid black;*/
-    height:89vh;
-    /*min-height: 670px;*/
-    margin-top:-10px;
-    overflow:hidden;
+    opacity: 1;
+    z-index: 1;
+    /*max-height: 100vh;*/
+    height: 1450px;
+    overflow: hidden;
     background-color: white;
-    display:flex;
+  }
+  .middleWrapper:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 100px;
+    margin-left: 0px;
+    z-index: -1;
+    opacity: 0.7;
+    background-image: url("https://i.imgur.com/XEqiYOT.jpg");
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    background-position: "center";
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: 500%;
+  }
+  .middleLeft,
+  .middleRight {
+    display: none;
+  }
+  .middleMobileWrapper {
+    display: grid;
+    grid-template-rows: 27% 36% 36%;
+    height: 1550px;
+  }
+  .middleMobileHeader {
+    display: flex;
     justify-content: center;
     align-items: center;
-    /*margin-top:-130px;*/
-  }
-  .navSlogan{
-    display:none;
-  }
-  .problemSolution{
-    display:none;
-    margin-top:75px;
-    /*margin-left:25px;*/
-    display:grid;
-    grid-template-rows: 1fr 1fr;
-  }
-  .problemStatement{
-    display:none;
-    width: 93%;
-    height:90%;
-    border:1px solid black;
-  }
-  .logo{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size:2em;
-  }
-  .logoImage{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:160px;
-    margin-left:30px;
-    z-index:1
-  }
-  .logo img:hover{
-    cursor:pointer;
-  }
-
-  .solutionStatement{
-    display:none;
-    width:93%;
-    height:90%;
-    border:1px solid black;
-  }
-  .exampleSolution{
-    display:grid;
-    grid-template-rows:47% 5% 40%;
-    border:1px solid black;
-    height:550px;
-    width:90%;
+    font-size: 1.8em;
+    font-family: "Fira Sans", sans-serif;
     /*margin-top:100px;*/
-    /*margin-left:25px*/
+    font-weight: bold;
+    height: 50px;
+    margin-top: 100px;
+    padding: 0px 0px 0px 30px;
+    margin-bottom: -150px;
+    /*border-bottom:1px solid black;*/
   }
-  .studentData{
-    display:flex;
+  .middleMobileContent {
+    display: grid;
+    grid-template-rows: 70% 20%;
+    font-family: "Fira Sans", sans-serif;
+    height: 650px;
+    margin-top: -125px;
+  }
+  .middleMobileCitation {
+    display: flex !important;
     justify-content: center;
-    align-items:center;
-    font-size: 1.2em;
-    padding-top:0px;
+    align-items: center;
+    padding: 7%;
+    /*padding-top:25px;*/
   }
-  .exampleSolution div img{
-    height:225px;
+  /*.middleMobileContent div{
+    display: grid;
+    grid-template-columns:30% 70%;
+    margin-top:40px;
+  }*/
+  .middleMobileContent div img {
+    margin-top: 25px;
+    width: 45%;
     border-radius: 50%;
-    display:block;
-    margin-top:20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top:8
+    margin-left: 25%;
   }
-  .exampleTestimonial{
-    display:flex;
+  .middleMobileContent div p {
+    margin-top: 25px;
+    padding-left:15px;
+    padding-right:15px;
+  }
+
+  .contactWrapper {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    height: 91vh;
+    min-height: 700px;
+    margin-top: -10px;
+  }
+  .contactWrapperHeader {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .contactHeader {
+    width: 100%;
+    display: flex;
     justify-content: center;
-    align-items:center;
-    font-family: 'Bitter', serif;
-    margin-left:25px;
-    margin-right:15px;
-    font-size:1.5em;
+    align-items: center;
+    font-size: 3em;
+    margin-top: 25px;
   }
-  .heroName{
-    display:flex;
-    position:relative;
-    top:150px;
-    left:30px;
-    font-size:2em;
-    z-index:19;
-    color:black;
+  .contactThanks {
+    display: none !important;
   }
-  .heroPartners{
-    display:flex;
-    position:relative;
-    font-family:"Fira Sans", sans-serif;
-    top:150px;
-    left:50px;
-    font-size:1.8em;
-    z-index:18;
-    color:black;
-    width:250px;
+
+  .convertUser {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 500px;
   }
-  .heroGraduates{
-    display:flex;
-    position:relative;
-    top:167px;
-    left:50px;
-    font-size:1.2em;
-    z-index:18;
-    color:black;
-    width:60%;
+  .contactForm {
+    background-color: #cccdce;
+    border-radius: 5px;
+    margin-left: 15px;
+    margin-top: 25px;
+    height: 100%;
+    width: 92%;
   }
-  .heroContact{
+  .inputForm {
+    display: grid;
+    grid-template-rows: 10% 10% 10% 40%;
+    margin-top: 15px;
+  }
+  .inputName {
+    margin-left: 10px;
+    margin-top: 15px;
+    height: 40px;
+    width: 265px;
+    border-radius: 2px;
+  }
+  .inputPhone,
+  .inputEmail {
+    margin-top: 25px;
+    margin-left: 10px;
+    width: 265px;
+    height: 40px;
+    border-radius: 2px;
+  }
+  .inputSend {
+    margin-top: 15px;
+    margin-left: 10px;
+    width: 272px;
+    height: 25px;
+    border-radius: 2px;
+    background-color: white;
+  }
+  .inputTextArea {
+    margin-top: 25px;
+    margin-left: 10px;
+    width: 265px;
+    height: 200px;
+    border-radius: 2px;
+  }
+  .contactDetails {
+    display: none;
+    border: 1px solid black;
+    width: 90%;
+    height: 81.5%;
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 5px;
+  }
+  .footerWrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: 100px;
+    border: 1px solid black;
+    font-family: "Fira Sans", sans-serif;
+  }
+  .footerWrapper div:nth-child(1),
+  .footerWrapper div:nth-child(2) {
+    display: none;
+  }
+  .footerWrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerWrapper div:nth-child(1) {
+    font-size: 1.4em;
+  }
+  .footerWrapper div:nth-child(3) {
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 1.32em;
+  }
+  .footerWrapper div:nth-child(4) {
+    width: 50px;
+    font-style: italic;
+    font-size: 0.8em;
+  }
+  .show {
+    display: grid;
+  }
+  .hide {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+  .navbar {
+    display: grid;
+    width: 375px;
+    position: fixed;
+    top: 0;
+    grid-template-columns: 20% 80%;
+    height: 100px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    z-index: 20;
+    overflow: hidden;
+  }
+  .logo,
+  .navBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #170c6b;
+  }
+  .navBurger:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #990106;
+  }
+  .logoImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    margin-right: 80px;
+    z-index: 1;
+  }
+  .logo img:hover {
+    cursor: pointer;
+  }
+  .navSlogan {
+    display: none;
+  }
+  .navAbout,
+  .navResources,
+  .navWhiteSpace,
+  .navWorkShops,
+  .navContact,
+  .navServices,
+  .navCurrentStudents {
+    display: none;
+  }
+  .mobileNav {
+    margin-top: 100px;
+    margin-bottom: 55px;
+    height: 375px;
+    display: grid;
+    grid-template-rows: 1fr;
+    padding-bottom: -75px;
+    width: 100%;
+  }
+  .mobileNav a {
+    height: 75px;
+    color: #170c6b;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding-left: 30px;
+    font-size: 1.5em;
+  }
+  .mobileNav a:hover {
+    font-size: 1.8em;
+    background-color: #990106;
+    color: white;
+    cursor: pointer;
+  }
+
+  .heroWrapper {
+    overflow: hidden;
+    max-height: 100vh;
+    min-height: 750px;
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    width: 100%;
+    height: 100%;
+    background-position: top right -200px;
+    background-repeat: no-repeat;
+    /*background-position-x:left 100px;*/
+    background-size: cover;
+  }
+  .heroPartners {
+    display: flex;
+    position: relative;
+    top: 150px;
+    left: 30px;
+    font-size: 1.8em;
+    font-family: "Fira Sans", sans-serif;
+    z-index: 18;
+    color: black;
+    width: 250px;
+  }
+
+  .heroContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Fira Sans", sans-serif;
+    position: relative;
+    top: 190px;
+    left: 75px;
+    height: 50px;
+    width: 150px;
+    background: white;
+    color: #170c6b;
+    z-index: 19;
+    font-size: 1.3em;
+    border-radius: 5px;
+  }
+  .heroContact:hover {
+    color: white;
+    font-weight: bold;
+    font-family: "Fira Sans", sans-serif;
+    background-color: #990106;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+
+  .middleWrapper {
+    display: grid;
+    grid-template-rows: 40% 60%;
+    width: 100%;
+    position: relative;
+    background: #5c97ff;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 1;
+    /*max-height: 100vh;*/
+    height: 1100px;
+    overflow: hidden;
+    background-color: white;
+  }
+  .middleWrapper:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 100px;
+    margin-left: 0px;
+    z-index: -1;
+    opacity: 0.7;
+    background-image: url("https://i.imgur.com/XEqiYOT.jpg");
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    background-position: "center";
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: 400%;
+  }
+  .middleLeft,
+  .middleRight {
+    display: none;
+  }
+  .middleMobileWrapper {
+    display: grid;
+    grid-template-rows: 27% 36% 36%;
+    height: 1200px;
+  }
+  .middleMobileHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-family: "Fira Sans", sans-serif;
+    /*margin-top:100px;*/
+    font-weight: bold;
+    height: 50%;
+    padding: 30px 0px 0px 60px;
+    /*border-bottom:1px solid black;*/
+  }
+  .middleMobileContent {
+    display: grid;
+    grid-template-rows: 75% 20%;
+    font-family: "Fira Sans", sans-serif;
+    height: 475px;
+    margin-top: -100px;
+  }
+  .middleMobileCitation {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+    /*padding-top:25px;*/
+  }
+  /*.middleMobileContent div{
+    display: grid;
+    grid-template-columns:30% 70%;
+    margin-top:40px;
+  }*/
+  .middleMobileContent div img {
+    margin-top: 10px;
+    width: 30%;
+    border-radius: 50%;
+    margin-left: 29%;
+  }
+  .middleMobileContent div p {
+    padding-left:15px;
+    padding-right:15px;
+  }
+
+  .contactWrapper {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    height: 91vh;
+    min-height: 700px;
+  }
+  .contactWrapperHeader {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .contactHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    margin-top: 25px;
+  }
+  .contactThanks {
+    display: none !important;
+  }
+
+  .convertUser {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 500px;
+  }
+  .contactForm {
+    background-color: #cccdce;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 25px;
+    height: 100%;
+    width: 85%;
+  }
+  .inputForm {
+    display: grid;
+    grid-template-rows: 10% 10% 10% 40%;
+    margin-top: 15px;
+  }
+  .inputName {
+    margin-left: 20px;
+    margin-top: 15px;
+    height: 40px;
+    width: 275px;
+    border-radius: 2px;
+  }
+  .inputPhone,
+  .inputEmail {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 275px;
+    height: 40px;
+    border-radius: 2px;
+  }
+  .inputSend {
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 282px;
+    height: 25px;
+    border-radius: 2px;
+    background-color: white;
+  }
+  .inputTextArea {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 275px;
+    height: 200px;
+    border-radius: 2px;
+  }
+  .contactDetails {
+    display: none;
+    border: 1px solid black;
+    width: 90%;
+    height: 81.5%;
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 5px;
+  }
+  .footerWrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: 100px;
+    border: 1px solid black;
+    font-family: "Fira Sans", sans-serif;
+  }
+  .footerWrapper div:nth-child(1),
+  .footerWrapper div:nth-child(2) {
+    display: none;
+  }
+  .footerWrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerWrapper div:nth-child(1) {
+    font-size: 1.4em;
+  }
+  .footerWrapper div:nth-child(3) {
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-size: 1.32em;
+  }
+  .footerWrapper div:nth-child(4) {
+    width: 50px;
+    font-style: italic;
+    font-size: 0.8em;
+  }
+  .show {
+    display: grid;
+  }
+  .hide {
+    display: none;
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 598px) {
+  .navbar {
+    display: grid;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    grid-template-columns: 20% 80%;
+    height: 100px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    z-index: 20;
+  }
+  .navBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width:100%;*/
+    color: #170c6b;
+  }
+  .navBurger:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #990106;
+  }
+  .logo {
     display:flex;
     justify-content: center;
     align-items: center;
-    position:relative;
-    font-family:'Fira Sans', sans-serif;
-    top:170px;
-    left:100px;
-    height:50px;
-    width:150px;
+    margin-top: 2px;
+    /*margin-right:80px;*/
+    font-size: 2em;
+  }
+  .logoImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    margin-left: -75px;
+    z-index: 1;
+  }
+  .logo img:hover {
+    cursor: pointer;
+  }
+  .navAbout,
+  .navResources,
+  .navWhiteSpace,
+  .navWorkShops,
+  .navContact,
+  .navServices,
+  .navCurrentStudents,
+  .navSlogan {
+    display: none;
+  }
+  .mobileNav {
+    margin-top: 100px;
+    margin-bottom: 75px;
+    height: 375px;
+    display: grid;
+    grid-template-rows: 1fr;
+    padding-bottom: -75px;
+    width: 100%;
+  }
+  .mobileNav a {
+    height: 75px;
+    color: #170c6b;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding-left: 30px;
+    font-size: 1.5em;
+  }
+  .mobileNav a:hover {
+    font-size: 1.8em;
+    background-color: #990106;
+    color: white;
+    cursor: pointer;
+  }
+
+  .heroWrapper {
+    overflow: hidden;
+    max-height: 100vh;
+    min-height: 750px;
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    width: 100% !important;
+    height: 100%;
+    background-position: top right -200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .heroPartners {
+    display: flex;
+    position: relative;
+    font-family: "Fira Sans", sans-serif;
+    top: 150px;
+    left: 50px;
+    font-size: 1.8em;
+    z-index: 18;
+    color: black;
+    width: 250px;
+  }
+  .heroContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "Fira Sans", sans-serif;
+    top: 170px;
+    left: 100px;
+    height: 50px;
+    width: 150px;
     background: white;
-    color:#170c6b;
-    z-index:19;
-    font-size:1.3em;
-    border-radius:5px;
+    color: #170c6b;
+    font-size: 1.3em;
+    border-radius: 5px;
   }
-  .heroContact:hover{
-    color:white;
+  .heroContact:hover {
+    color: white;
     font-weight: bold;
-    font-family:'Fira Sans', sans-serif;
-    background-color:#990106;
-    cursor:pointer;
-    font-size:1.5em;
+    font-family: "Fira Sans", sans-serif;
+    background-color: #990106;
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+  .middleWrapper {
+    display: grid;
+    grid-template-rows: 40% 60%;
+    width: 100%;
+    position: relative;
+    background: #5c97ff;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 1;
+    /*max-height: 100vh;*/
+    height: 1100px;
+    overflow: hidden;
+    background-color: white;
+  }
+  .middleWrapper:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 100px;
+    margin-left: 0px;
+    z-index: -1;
+    opacity: 0.7;
+    background-image: url("https://i.imgur.com/XEqiYOT.jpg");
+    /*background-attachment: fixed;*/
+    background-repeat: no-repeat;
+    background-position: "center";
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: 400%;
+  }
+  .middleLeft,
+  .middleRight {
+    display: none;
+  }
+  .middleMobileWrapper {
+    display: grid;
+    grid-template-rows: 27% 36% 36%;
+    height: 1200px;
+  }
+  .middleMobileHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    font-family: "Fira Sans", sans-serif;
+    /*margin-top:100px;*/
+    font-weight: bold;
+    height: 50%;
+    padding: 40px 0px 0px 40px;
+    /*border-bottom:1px solid black;*/
+  }
+  .middleMobileContent {
+    display: grid;
+    grid-template-rows: 75% 20%;
+    font-family: "Fira Sans", sans-serif;
+    height: 475px;
+    margin-top: -100px;
+  }
+  .middleMobileCitation {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 7%;
+    /*padding-top:25px;*/
+  }
+  /*.middleMobileContent div{
+    display: grid;
+    grid-template-columns:30% 70%;
+    margin-top:40px;
+  }*/
+  .middleMobileContent div img {
+    margin-top: 10px;
+    width: 30%;
+    border-radius: 50%;
+    margin-left: 29%;
+  }
+  .middleMobileContent div p {
+    padding-left:15px;
+    padding-right:15px;
   }
 
-.mobileNav{
-  margin-top:100px;
-  margin-bottom:-126px;
-  height:375px;
-  display:grid;
-  grid-template-rows:1fr;
-  padding-bottom:-75px;
-  width:100%;
-}
-.mobileNav div{
-  height:75px;
-  color:#170c6b;
-  border-bottom:1px solid black;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: white;
-  padding-left:30px;
-  font-size:1.5em;
-  width:100%;
-}
-.mobileNav div:hover{
-font-size:1.8em;
-background-color:#990106;
-color:white;
-cursor:pointer;
-}
+  .contactWrapper {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    height: 89vh;
+    min-height: 750px;
+    margin-bottom: -100px;
+  }
+  .contactWrapperHeader {
+    display: grid;
+    grid-template-rows: 1fr;
+    margin-top: -10px;
+  }
+  .contactHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    margin-top: 25px;
+  }
+  .contactThanks {
+    display: none !important;
+  }
 
-.show{
-  display:grid;
-}
-.hide{
-  display:none;
-}
-.contactWrapper{
-  display:grid;
-  grid-template-rows: 10% 90%;
-  height:89vh;
-  min-height: 650px;
-  margin-bottom:-100px;
-}
-.contactWrapperHeader {
-  display: grid;
-  grid-template-rows: 1fr;
-  margin-top:-10px;
-}
-.contactHeader {
-  width:100%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  font-size:3em;
-  margin-top:25px;
-}
-.contactThanks {
-  display:none !important;
-}
-
-.convertUser{
-  display: grid;
-  grid-template-rows: 1fr;
-  height:500px;
-  margin-bottom:0px;
-}
-.contactForm {
-  background-color:#cccdce;
-  border-radius: 5px;
-  margin-left:30px;
-  margin-top:25px;
-  height:100%;
-  width:85%;
-}
-.inputForm{
-  display:grid;
-  grid-template-rows:10% 10% 10% 40%;
-  margin-top: 15px;
-}
-.inputName{
-  margin-left:20px;
-  margin-top:25px;
-  height:25px;
-  width:300px;
-  border-radius:2px;
-}
-.inputPhone, .inputEmail{
-  margin-top:25px;
-  margin-left:20px;
-  width:300px;
-  height:25px;
-  border-radius:2px;
-}
- .inputSend{
-   margin-top:25px;
-   margin-left:20px;
-   width:307px;
-   height:25px;
-   border-radius:2px;
-   background-color: white;
- }
-.inputTextArea{
-  margin-top:25px;
-  margin-left:20px;
-  width:300px;
-  height:200px;
-  border-radius:2px;
-}
-.contactDetails{
-  display:none;
-  border:1px solid black;
-  width:90%;
-  height:81.5%;
-  margin-top:25px;
-  margin-left:25px;
-  border-radius:5px;
-}
+  .convertUser {
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 500px;
+    margin-bottom: 0px;
+  }
+  .contactForm {
+    background-color: #cccdce;
+    border-radius: 5px;
+    margin-left: 30px;
+    margin-top: 25px;
+    height: 100%;
+    width: 85%;
+  }
+  .inputForm {
+    display: grid;
+    grid-template-rows: 10% 10% 10% 40%;
+    margin-top: 15px;
+  }
+  .inputName {
+    margin-left: 20px;
+    margin-top: 25px;
+    height: 25px;
+    width: 300px;
+    border-radius: 2px;
+  }
+  .inputPhone,
+  .inputEmail {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 300px;
+    height: 25px;
+    border-radius: 2px;
+  }
+  .inputSend {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 307px;
+    height: 25px;
+    border-radius: 2px;
+    background-color: white;
+  }
+  .inputTextArea {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 300px;
+    height: 200px;
+    border-radius: 2px;
+  }
+  .contactDetails {
+    display: none;
+    border: 1px solid black;
+    width: 90%;
+    height: 81.5%;
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 5px;
+  }
+  .footerWrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    height: 100px;
+    border: 1px solid black;
+    font-family: "Fira Sans", sans-serif;
+  }
+  .footerWrapper div:nth-child(1),
+  .footerWrapper div:nth-child(2) {
+    display: none;
+  }
+  .footerWrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerWrapper div:nth-child(3) {
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+    font-size: 1.32em;
+  }
+  .footerWrapper div:nth-child(4) {
+    width:50px;
+    font-style: italic;
+    font-size: 0.8em;
+  }
+  .show {
+    display: grid;
+  }
+  .hide {
+    display: none;
+  }
 }
 @media only screen and (min-width: 599px) and (max-width: 827px) {
   /*works until 595 pixels, may need another @media screen*/
 
   .navbar {
-    display:grid;
-    width:100%;
-    position:fixed;
-    top:0;
-    grid-template-columns:10% 46% 16% 14% 14%;
-    height:105px;
+    display: grid;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    grid-template-columns: 10% 32% 16% 14% 28%;
+    height: 105px;
     background-color: white;
     border-bottom: 1px solid black;
-    z-index:21;
+    z-index: 21;
   }
-  .navBurger, .navWorkShops, .navContact, .navServices{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .navAbout, .navResources, .navWhiteSpace{
-    display:none;
-  }
-  .logo{
-    display:flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    /*margin-left:200px;*/
-    font-size:2em;
-  }
-  .logo img:hover{
-    cursor:pointer;
-  }
-  .contact{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .heroWrapper{
-    overflow: hidden;
-    max-height:100vh;
-    min-height: 580px;
-    margin-top:75px;
-    z-index:1;
-    background-image:url('https://i.imgur.com/TGlZESH.jpg');
-    background-position: top right;
-    width:100%;
-    height:100%;
-    background-size:cover;
-    background-repeat: no-repeat;
-  }
-  .graySwitch:hover{
-    font-size:1.2em;
-    cursor:pointer;
-    color:white;
-    background-color:#990106;
-  }
-  .heroWrapper img{
-    width:145%;
-    max-height:100%;
-    /*margin-top:-144px;*/
-    margin-left: -200px;
-    z-index:1;
-    margin-top:100px;
-  }
-  .navBurger{
+  .navContact,
+  .navServices,
+  .navCurrentStudents {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*font-size:1.8em;*/
-    margin-left:0px;
-    color:#170c6b;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
   }
-  .navBurger:hover{
-    /*font-size:3.8em;*/
-    color:white;
-    background-color:#990106;
+
+  .navBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #170c6b;
+  }
+  .navBurger:hover {
+    color: white;
+    background-color: #990106;
     cursor: pointer;
   }
-  .logoImage{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:173px;
-    margin-left:30px;
-    z-index:1
-  }
-  .navSlogan{
-    display:none;
-  }
-  .problemWrapper{
-    position: relative;
-    background: #5C97FF;
-    overflow: hidden;
-    opacity:1;
-    z-index:1;
-    /*border-top:1px solid black;
-    border-bottom: 1px solid black;*/
-    height:95vh;
-    min-height: 800px;
-    overflow:hidden;
-    background-color: white;
-    display:grid;
-    grid-template-rows: 1fr 2fr;
-    /*margin-top:-150px;*/
-  }
-  .problemWrapper:before{
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding-left: 100px;
-    margin-left: 0px;
-    z-index: -1;
-    opacity: 0.7;
-    background-image: url('https://i.imgur.com/XEqiYOT.jpg');
-    background-attachment:fixed;
-    background-repeat: no-repeat;
-    background-position:"center";
-    -ms-background-size: cover;
-    -o-background-size: cover;
-    -moz-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: 170%;
-}
 
-  .problemSolution, .exampleSolution{
-    grid-column:1
+  .navAbout,
+  .navResources,
+  .navWhiteSpace,
+  .navWorkShops,
+  .navSlogan {
+    display: none;
   }
-
-  .problemSolution{
-    margin-top:20px;
-    margin-left:25px;
-    display:grid;
-    grid-template-rows: 1fr 1fr;
-    grid-row: 2;
+  .logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
   }
-  .problemStatement{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color:black;
-    font-size:2.2em;
-    font-weight: bold;
-    padding-left:60px;
-    padding-right:60px;
-    line-height: 150%;
-    width: 70%;
-    height:90%;
-    margin-top:-25px;
-  }
-  .solutionStatement{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Bitter', serif;
-    color:black;
-    font-size:2.2em;
-    font-weight: bold;
-    padding-left:60px;
-    padding-right:60px;
-    line-height: 150%;
-    width: 70%;
-    height:90%;
-    /*border:1px solid black;*/
-  }
-  .exampleSolution{
-    display:grid;
-    grid-row:1;
-    grid-template-columns:40% 18% 42%;
-    /*border:1px solid black;*/
-    height:250px;
-    width:89.8%;
-    margin-top:25px;
-    margin-left:25px;
-    /*margin-bottom:-100px;*/
-  }
-  .studentData{
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    font-size: 1.2em;
-    font-weight: bold;
-    padding-top:0px;
-  }
-  .exampleSolution div img{
-    height:185px;
-    border-radius: 50%;
-    display:block;
-    margin-top:30px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top:8
-  }
-  .exampleTestimonial{
-    display:flex;
-    justify-content: center;
-    font-family: 'Bitter', serif;
-    padding-left:15px;
-    padding-right:15px;
-    align-items: center;
-    font-size:1.3em;
-    /*letter-spacing: 0.01em;*/
-  }
-  .mobileNav{
-    margin-bottom:-205px;
-    padding-top:105px;
-    height:75px;
-    display:grid;
-    grid-template-rows:1fr;
-    z-index:2;
-  }
-  .mobileNav div{
-    z-index:2;
-  }
-  .mobileNav div:hover{
-    background-color:#990106;
-    color:white;
-    font-size:1.9em;
-    cursor:pointer;
-  }
-  /*.mobileAbout{
-    margin-bottom:-100px;
-  }*/
-  .heroName{
-    display:flex;
-    position:relative;
-    top:150px;
-    left:30px;
-    font-size:3.3em;
-    z-index:19;
-    color:black;
-  }
-  .heroPartners{
-    display:flex;
-    position:relative;
-    font-family:'Fira Sans', sans-serif;
-    top:75px;
-    left:85px;
-    font-size:2.05em;
-    z-index:18;
-    color:black;
-    width:400px;
-  }
-  .heroGraduates{
-    display:flex;
-    position:relative;
-    top:162px;
-    left:85px;
-    font-size:2em;
-    z-index:18;
-    color:black;
-    width:60%;
-  }
-  .heroContact{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position:relative;
-    font-family:'Fira Sans', sans-serif;
-    top:110px !important;
-    left:160px;
-    height:75px;
-    width:200px;
-    background: white;
-    color:#170c6b;
-    z-index:19;
-    font-size:1.85em;
-    border-radius:5px;
-  }
-  .heroContact:hover{
-    color:white;
-    font-weight: bold;
-    font-family:'Fira Sans', sans-serif;
-    background-color:#990106;
-    cursor:pointer;
-    font-size:2em;
-  }
-  .show{
-    display:grid;
-  }
-  .hide{
-    display:none;
-  }
-.mobileNav{
-  padding-top:105px;
-  margin-bottom:-66px !important;
-  height:150px;
-  display:grid;
-  grid-template-rows:1fr;
-  z-index:22;
-}
-.mobileNav div{
-  height:80.5px;
-  color:#170c6b;
-  border-bottom:1px solid black;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  background-color: white;
-  padding-left:30px;
-  font-size:1.5em;
-}
-.mobileWorkshops, .mobileContact, .mobileServices{
-  display:none !important;
-}
-.contactWrapper{
-  display:grid;
-  grid-template-rows: 10% 90%;
-  height:91vh;
-  min-height: 750px;
-}
-.contactWrapperHeader {
-  display: grid;
-  grid-template-rows: 1fr;
-}
-.contactHeader {
-  width:100%;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  font-size:3em;
-  margin-top:25px;
-}
-.contactThanks {
-  display:none !important;
-}
-
-.convertUser{
-  display: grid;
-  grid-template-rows: 75%;
-}
-.contactForm {
-  background-color:#cccdce;
-  border-radius: 5px;
-  margin-left:40px;
-  margin-top:25px;
-  height:100%;
-  width:85%;
-}
-.inputForm{
-  display:grid;
-  grid-template-rows:10% 10% 10% 40%;
-  margin-top: 15px;
-}
-.inputName{
-  margin-left:40px;
-  margin-top:25px;
-  height:25px;
-  width:350px;
-  border-radius:2px;
-}
-.inputPhone, .inputEmail{
-  margin-top:25px;
-  margin-left:40px;
-  width:350px;
-  height:25px;
-  border-radius:2px;
-}
- .inputSend{
-   margin-top:25px;
-   margin-left:40px;
-   width:357px;
-   height:25px;
-   border-radius:2px;
- }
-.inputTextArea{
-  margin-top:25px;
-  margin-left:40px;
-  width:350px;
-  height:200px;
-  border-radius:2px;
-}
-.contactDetails{
-  display:none;
-  border:1px solid black;
-  width:90%;
-  height:81.5%;
-  margin-top:25px;
-  margin-left:25px;
-  border-radius:5px;
-}
-.show{
-  display:grid;
-}
-.hide{
-  display:none;
-}
-}
-@media only screen
-and (device-width : 1024px)
-and (device-height : 768px)
-and (orientation : landscape) {
-  /*IPAD LANDSCAPE view - having to add way too may !important tags, unsure why*/
-  body{
-    margin:0px;
-  }
-  .navbar {
-    display:grid;
-    width:100%;
-    position:fixed;
-    top:0;
-    grid-template-columns:10% 50% 10% 10% 10% 10%;
-    height:105px;
-    background-color: white;
-    border-bottom: 1px solid gray;
-    z-index:21;
-    margin-bottom:0px;
-  }
-  .logo, .navWorkShops, .navAbout, .navContact, .navServices, .navResources{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .logo{
-    font-size:2em;
-    margin-left:300px;
-  }
-  .graySwitch:hover{
-    /*font-size:1.2em;*/
-    cursor:pointer;
-    color:white;
-    background-color: #D7D6D4;
-  }
-  .navAbout, .navWhiteSpace{
-    display:none;
-  }
-  .navBurger{
+  .logo img {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*font-size:1.5em;*/
-    margin-left:0px;
+    width: 173px;
+    margin-left: 30px;
+    z-index: 1;
   }
-  .contact{
-    display:flex;
-    justify-content: center;
+  .logo img:hover {
+    cursor: pointer;
+  }
+  .graySwitch:hover {
+    font-size: 1.2em;
+    cursor: pointer;
+    color: white;
+    background-color: #990106;
+  }
+  .mobileNav {
+    padding-top: 105px;
+    margin-bottom: 95px;
+    height: 150px;
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .mobileNav a {
+    height: 80.5px;
+    color: #170c6b;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
+    background-color: white;
+    padding-left: 30px;
+    font-size: 1.5em;
   }
-  .heroWrapper{
-    overflow: hidden;
-    max-height:93.1vh;
-    min-height: 690px !important;
+  .mobileNav a:hover {
+    background-color: #990106;
+    color: white;
+    font-size: 1.9em;
+    cursor: pointer;
+  }
+  .mobileContact,
+  .mobileServices,
+  .mobileCurrentStudents {
+    display: none !important;
   }
 
-  .heroWrapper img{
-    width:160% !important;
-    margin-left:-350px;
-    margin-top:-240px;
-  }
-  .problemWrapper{
-    position: relative;
-    background: #5C97FF;
+  .heroWrapper {
     overflow: hidden;
-    opacity:1;
-    z-index:1;
-    height:91vh;
-    min-height:671px;
-    overflow:hidden;
-    background-color: white;
-    display:grid;
-    grid-template-columns: 60% 40%;
+    max-height: 100vh;
+    min-height: 580px;
+    margin-top: 75px;
+    z-index: 1;
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    background-position: top right;
+    /*width: 100%;
+    height: 100%;*/
+    background-size: cover;
+    background-repeat: no-repeat;
   }
-  .problemWrapper:before{
-    content: ' ';
+  .heroPartners {
+    display: flex;
+    position: relative;
+    font-family: "Fira Sans", sans-serif;
+    top: 75px;
+    left: 85px;
+    font-size: 2.05em;
+    z-index: 18;
+    color: black;
+    width: 400px;
+  }
+  .heroContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "Fira Sans", sans-serif;
+    top: 110px !important;
+    left: 160px;
+    height: 75px;
+    width: 200px;
+    background: white;
+    color: #170c6b;
+    z-index: 19;
+    font-size: 1.85em;
+    border-radius: 5px;
+  }
+  .heroContact:hover {
+    color: white;
+    font-weight: bold;
+    font-family: "Fira Sans", sans-serif;
+    background-color: #990106;
+    cursor: pointer;
+    font-size: 2em;
+  }
+  .middleWrapper {
+    display: grid;
+    grid-template-rows: 40% 60%;
+    width: 100%;
+    position: relative;
+    background: #5c97ff;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 1;
+    height: 100vh;
+    min-height: 700px;
+    overflow: hidden;
+    background-color: white;
+  }
+  .middleWrapper:before {
+    content: " ";
     display: block;
     position: absolute;
     left: 0;
@@ -1360,356 +1186,775 @@ and (orientation : landscape) {
     margin-left: 0px;
     z-index: -1;
     opacity: 0.7;
-    background-image: url('https://i.imgur.com/XEqiYOT.jpg');
-    background-attachment:fixed;
+    background-image: url("https://i.imgur.com/XEqiYOT.jpg");
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position:"center";
+    background-position: "center";
     -ms-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
-    background-size: 120%;
-}
-  .problemSolution{
-    margin-top:25px;
-    margin-left:25px;
-    display:grid;
-    grid-template-rows: 1fr 1fr;
+    background-size: 150%;
   }
-  .problemStatement{
-    display:flex;
+  /*.middleWrapper{
+    grid-row: 1;
+  }
+  .middleWrapper div:nth-of-type(1){
+    order:2;
+  }
+  .middleWrapper div:nth-of-type(2){
+    order:1;
+  }
+
+  .middleLeft {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    margin-top: -100px;
+  }
+  .middleSubLeft,
+  .middleSubRight {
+    display: grid;
+    grid-column:1;
+    grid-template-rows: 60% 30% 30%;
+    /*flex-direction: row-reverse;*/
+
+  .middleRight {
+    height: 60%;
+    padding: 10px 25px 25px 50px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    color:black;
-    font-size:2.2em;
+    font-size: 2.1em;
     font-weight: bold;
-    padding-left:60px;
-    padding-right:60px;
-    line-height: 150%;
-    width: 70%;
-    height:90%;
-    /*border:1px solid black;*/
+    font-family: "Fira Sans", sans-serif;
   }
-  .solutionStatement{
-    display:flex;
-    font-family: 'Bitter', serif;
+  .middleSubLeft div,
+  .middleSubRight div {
+    display: flex;
     justify-content: center;
     align-items: center;
-    color:black;
-    font-size:2em;
-    font-weight: bold;
-    margin-left:50px;
-    padding-left:10px;
-    padding-right:60px;
-    line-height: 150%;
-    margin-top: 30px;
-    /*background-color: white;*/
-    width: 75%;
-    height:90%;
-    /*border:1px solid black;*/
   }
-  .exampleSolution{
-    display:grid;
-    grid-template-rows:45% 5% 50%;
-    /*border:1px solid black;*/
-    height:91.3%;
-    width:90%;
-    margin-top:25px;
-  }
-  .studentData{
-    display:flex;
+  .middleSubLeft div:nth-child(1),
+  .middleSubRight div:nth-child(1) {
+    /*margin-top: -25px;*/
+    display: flex;
     justify-content: center;
-    align-items:center;
-    font-size: 1.2em;
-    padding-top:0px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
   }
-  .exampleSolution div img{
-    height:250px;
+  .middleSubLeft div img,
+  .middleSubRight div img {
+    width: 27%;
     border-radius: 50%;
-    display:block;
-    margin-top:20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top:8
+    position: absolute;
+    top: 250px;
   }
-  .exampleTestimonial{
-    display:flex;
-    justify-content: center;
-    font-family: 'Bitter', serif;
-    padding-left:15px;
-    padding-right:15px;
-    align-items: center;
-    font-size:1.7em;
-    /*letter-spacing: 0.01em;*/
+
+  .middleSubLeft div:nth-child(2),
+  .middleSubRight div:nth-child(2) {
+    /*padding: 0px 30px 0px 30px;
+    /*margin-top:-50px;*/
+    /*line-height: 130%;
+    font-size: 1.2em;*/
   }
-  /*.mobileNav{
-    padding-top:75px;
-    height:75px;
-    display:grid;
-    grid-template-rows:1fr;
-  }*/
-  .heroName{
-    display:flex;
-    position:relative;
-    top:150px;
-    left:50px;
-    font-size:4em;
-    z-index:19;
-    color:black;
+  .middleSubLeft div:nth-child(3),
+  .middleSubRight div:nth-child(3) {
+    /*padding: 50px 30px 30px 30px;*/
+    /*font-size: 1.1em;*/
   }
-  .heroPartners{
-    display:flex;
-    position:relative;
-    top:175px;
-    left:150px;
-    font-size:2em;
-    z-index:18;
-    color:black;
-    width:400px;
+  .middleSubLeft div img {
+    /*order:1;*/
+    /*margin-bottom:1300px;*/
   }
-  .heroGraduates{
-    display:flex;
-    position:relative;
-    top:185px;
-    left:150px;
-    font-size:2em;
-    z-index:18;
-    color:black;
-    width:60%;
+  .middleLeft,
+  .middleRight {
+    display: none;
   }
-  .heroContact{
-    display:flex;
+  .middleMobileWrapper {
+    display: grid;
+    grid-template-rows: 20% 32% 32%;
+    height: 800px;
+  }
+  .middleMobileHeader {
+    display: flex;
     justify-content: center;
     align-items: center;
-    position:relative;
-    font-family:'Fira Sans', sans-serif;
-    top:225px;
-    left:220px;
-    height:75px;
-    width:200px;
-    background: white;
-    color:#170c6b;
-    z-index:19;
-    font-size:1.85em;
-    border-radius:5px;
-  }
-  .heroContact:hover{
-    color:blue;
+    font-size: 2.5em;
+    font-family: "Fira Sans", sans-serif;
+    /*margin-top:100px;*/
     font-weight: bold;
-    background-color:white;
-    cursor:pointer;
+    padding: 60px 0px 0px 60px;
   }
-  .mobileNav{
-    margin-bottom:-105px !important;
-    padding-top:105px;
-    z-index:0;
+  .middleMobileContent {
+    display: grid;
+    grid-template-rows: 70% 30%;
+    font-family: "Fira Sans", sans-serif;
+    height: 100%;
   }
-  .mobileNav div{
-    height:90px;
-    color:white;
-    border-bottom:1px solid black;
+  .middleMobileCitation {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+  }
+  .middleMobileContent div {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 40px;
+  }
+  .middleMobileContent div img {
+    margin-top: 25px;
+    width: 50%;
+    border-radius: 50%;
+    margin-left: 25px;
+  }
+  .middleMobileContent div p {
+    margin-left: -50px;
+    margin-right: 10px;
+  }
+  .contactWrapper {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    height: 91vh;
+    min-height: 750px;
+  }
+  .contactWrapperHeader {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .contactHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    margin-top: 25px;
+  }
+  .contactThanks {
+    display: none !important;
+  }
+
+  .convertUser {
+    display: grid;
+    grid-template-rows: 75%;
+  }
+  .contactForm {
+    background-color: #cccdce;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-top: 25px;
+    height: 100%;
+    width: 85%;
+  }
+  .inputForm {
+    display: grid;
+    grid-template-rows: 10% 10% 10% 40%;
+    margin-top: 15px;
+  }
+  .inputName {
+    margin-left: 40px;
+    margin-top: 25px;
+    height: 25px;
+    width: 350px;
+    border-radius: 2px;
+  }
+  .inputPhone,
+  .inputEmail {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 350px;
+    height: 25px;
+    border-radius: 2px;
+  }
+  .inputSend {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 357px;
+    height: 25px;
+    border-radius: 2px;
+  }
+  .inputTextArea {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 350px;
+    height: 200px;
+    border-radius: 2px;
+  }
+  .contactDetails {
+    display: none;
+    border: 1px solid black;
+    width: 90%;
+    height: 81.5%;
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 5px;
+  }
+  .footerWrapper {
+    display: grid;
+    grid-template-columns: 35% 20% 35% 10%;
+    height: 100px;
+    border: 1px solid black;
+    font-family: "Fira Sans", sans-serif;
+  }
+  .footerWrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerWrapper div:nth-child(1) {
+    font-size: 1.2em;
+  }
+  .footerWrapper div:nth-child(3) {
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 1.4em;
+  }
+  .footerWrapper div:nth-child(4) {
+    width: 80%;
+    font-style: italic;
+    font-size: 0.8em;
+  }
+  .show {
+    display: grid;
+  }
+  .hide {
+    display: none;
+  }
+}
+@media only screen and (device-width:768px) and (device-height:1024px) and (orientation:portrait){
+  .navbar {
+    display: grid;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    grid-template-columns: 10% 32% 16% 14% 28%;
+    height: 105px;
+    background-color: white;
+    border-bottom: 1px solid black;
+    z-index: 21;
+  }
+  .navContact,
+  .navServices,
+  .navCurrentStudents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
+  }
+
+  .navBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #170c6b;
+  }
+  .navBurger:hover {
+    color: white;
+    background-color: #990106;
+    cursor: pointer;
+  }
+
+  .navAbout,
+  .navResources,
+  .navWhiteSpace,
+  .navWorkShops,
+  .navSlogan {
+    display: none;
+  }
+  .logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .logo img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 173px;
+    margin-left: 30px;
+    z-index: 1;
+  }
+  .logo img:hover {
+    cursor: pointer;
+  }
+  .graySwitch:hover {
+    font-size: 1.2em;
+    cursor: pointer;
+    color: white;
+    background-color: #990106;
+  }
+  .mobileNav {
+    padding-top: 105px;
+    margin-bottom: 95px;
+    height: 150px;
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .mobileNav a {
+    height: 80.5px;
+    color: #170c6b;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: white;
+    padding-left: 30px;
+    font-size: 1.5em;
+  }
+  .mobileNav a:hover {
+    background-color: #990106;
+    color: white;
+    font-size: 1.9em;
+    cursor: pointer;
+  }
+  .mobileContact,
+  .mobileServices,
+  .mobileCurrentStudents {
+    display: none !important;
+  }
+
+  .heroWrapper {
+    overflow: hidden;
+    max-height: 100vh;
+    min-height: 949px;
+    margin-top: 75px;
+    z-index: 1;
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    background-position: top right -200px;
+    /*width: 100%;
+    height: 100%;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .heroPartners {
+    display: flex;
+    position: relative;
+    font-family: "Fira Sans", sans-serif;
+    top: 100px;
+    left: 85px;
+    font-size: 2.05em;
+    z-index: 18;
+    color: black;
+    width: 400px;
+  }
+  .heroContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "Fira Sans", sans-serif;
+    top: 160px !important;
+    left: 160px;
+    height: 75px;
+    width: 200px;
+    background: white;
+    color: #170c6b;
+    z-index: 19;
+    font-size: 1.85em;
+    border-radius: 5px;
+  }
+  .heroContact:hover {
+    color: white;
+    font-weight: bold;
+    font-family: "Fira Sans", sans-serif;
+    background-color: #990106;
+    cursor: pointer;
+    font-size: 2em;
+  }
+  .middleWrapper {
+    display: grid;
+    grid-template-rows: 40% 60%;
+    width: 100%;
+    position: relative;
+    background: #5c97ff;
+    overflow: hidden;
+    opacity: 1;
+    /*z-index: 1;*/
+    /*height: 100vh;*/
+    height: 949px;
+    background-color: white;
+  }
+  .middleWrapper:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /*height: 100%;*/
+    height:949px;
+    padding-left: 100px;
+    margin-left: 0px;
+    /*z-index: -1;*/
+    opacity: 0.7;
+    background-image: url("https://i.imgur.com/XEqiYOT.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: "center";
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: 200%;
+  }
+  /*.middleWrapper{
+    grid-row: 1;
+  }
+  .middleWrapper div:nth-of-type(1){
+    order:2;
+  }
+  .middleWrapper div:nth-of-type(2){
+    order:1;
+  }
+
+  .middleLeft {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    margin-top: -100px;
+  }
+  .middleSubLeft,
+  .middleSubRight {
+    display: grid;
+    grid-column:1;
+    grid-template-rows: 60% 30% 30%;
+    /*flex-direction: row-reverse;*/
+
+  .middleRight {
+    height: 100%;
+    padding: 10px 25px 25px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.1em;
+    font-weight: bold;
+    font-family: "Fira Sans", sans-serif;
+  }
+  .middleSubLeft div,
+  .middleSubRight div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .middleSubLeft div:nth-child(1),
+  .middleSubRight div:nth-child(1) {
+    /*margin-top: -25px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .middleSubLeft div img,
+  .middleSubRight div img {
+    width: 27%;
+    border-radius: 50%;
+    position: absolute;
+    top: 250px;
+  }
+
+  .middleSubLeft div:nth-child(2),
+  .middleSubRight div:nth-child(2) {
+    /*padding: 0px 30px 0px 30px;
+    /*margin-top:-50px;*/
+    /*line-height: 130%;
+    font-size: 1.2em;*/
+  }
+  .middleSubLeft div:nth-child(3),
+  .middleSubRight div:nth-child(3) {
+    /*padding: 50px 30px 30px 30px;*/
+    /*font-size: 1.1em;*/
+  }
+  .middleSubLeft div img {
+    /*order:1;*/
+    /*margin-bottom:1300px;*/
+  }
+  .middleLeft,
+  .middleRight {
+    display: none;
+  }
+  .middleMobileWrapper {
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+    height: 949px;
+  }
+  .middleMobileHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    font-family: "Fira Sans", sans-serif;
+    /*margin-top:100px;*/
+    font-weight: bold;
+    padding: 60px 0px 0px 60px;
+  }
+  .middleMobileContent {
+    display: grid;
+    grid-template-rows: 70% 30%;
+    font-family: "Fira Sans", sans-serif;
+    height: 100%;
+  }
+  .middleMobileCitation {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+  }
+  .middleMobileContent div {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin-top: 40px;
+  }
+  .middleMobileContent div img {
+    margin-top: 25px;
+    width: 50%;
+    border-radius: 50%;
+    margin-left: 25px;
+  }
+  .middleMobileContent div p {
+    margin-left: -50px;
+    margin-right: 10px;
+  }
+  .contactWrapper {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    height: 91vh;
+    min-height: 750px;
+  }
+  .contactWrapperHeader {
+    display: grid;
+    grid-template-rows: 1fr;
+  }
+  .contactHeader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    margin-top: 25px;
+  }
+  .contactThanks {
+    display: none !important;
+  }
+
+  .convertUser {
+    display: grid;
+    grid-template-rows: 75%;
+  }
+  .contactForm {
+    background-color: #cccdce;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-top: 25px;
+    height: 100%;
+    width: 85%;
+  }
+  .inputForm {
+    display: grid;
+    grid-template-rows: 10% 10% 10% 40%;
+    margin-top: 15px;
+  }
+  .inputName {
+    margin-left: 40px;
+    margin-top: 25px;
+    height: 25px;
+    width: 350px;
+    border-radius: 2px;
+  }
+  .inputPhone,
+  .inputEmail {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 350px;
+    height: 25px;
+    border-radius: 2px;
+  }
+  .inputSend {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 357px;
+    height: 25px;
+    border-radius: 2px;
+  }
+  .inputTextArea {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 350px;
+    height: 200px;
+    border-radius: 2px;
+  }
+  .contactDetails {
+    display: none;
+    border: 1px solid black;
+    width: 90%;
+    height: 81.5%;
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 5px;
+  }
+  .footerWrapper {
+    display: grid;
+    grid-template-columns: 35% 20% 35% 10%;
+    height: 100px;
+    border: 1px solid black;
+    font-family: "Fira Sans", sans-serif;
+  }
+  .footerWrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerWrapper div:nth-child(1) {
+    font-size: 1.2em;
+  }
+  .footerWrapper div:nth-child(3) {
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 1.4em;
+  }
+  .footerWrapper div:nth-child(4) {
+    width: 80%;
+    font-style: italic;
+    font-size: 0.8em;
+  }
+  .show {
+    display: grid;
+  }
+  .hide {
+    display: none;
+  }
+}
+
+@media only screen and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+  /*IPAD LANDSCAPE view - having to add way too may !important tags, unsure why*/
+  body {
+    margin: 0px;
+  }
+  .navbar {
+    display: grid;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    grid-template-columns: 10% 26% 17% 10% 10% 10% 17% !important;
+    height: 105px;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    z-index: 21;
+    margin-bottom: 0px;
+  }
+  .logo,
+  .navWorkShops,
+  .navAbout,
+  .navContact,
+  .navServices,
+  .navResources {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navAbout,
+  .navWhiteSpace {
+    display: none;
+  }
+  .logo {
+    padding-right: 50px;
+  }
+  .graySwitch:hover {
+    cursor: pointer;
+    color: white;
+    background-color: #d7d6d4;
+  }
+  .navBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mobileNav {
+    margin-bottom: -105px !important;
+    padding-top: 105px;
+    z-index: 0;
+  }
+  .mobileNav a {
+    height: 90px;
+    color: white;
+    border-bottom: 1px solid black;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     background-color: gray;
-    padding-left:30px;
-    font-size:1.5em;
+    padding-left: 30px;
+    font-size: 1.5em;
   }
-  .mobileNav div:hover{
-    background-color:#990106;
-    color:white;
-    font-size:1.9em;
+  .mobileNav a:hover {
+    background-color: #990106;
+    color: white;
+    font-size: 1.9em;
   }
-  .mobileWorkshops, .mobileContact, .mobileServices, .mobileResources{
-    display:none !important;
+  .mobileContact,
+  .mobileServices,
+  .mobileResources,
+  .mobileCurrentStudents {
+    display: none !important;
   }
 
-  .contactWrapper{
-    display:grid;
-    grid-template-rows: 10% 90%;
-    height:91vh;
-    min-height: 650px;
+  .heroWrapper {
+    overflow: hidden;
+    max-height: 93.1vh;
+    min-height: 690px !important;
   }
-  .contactWrapperHeader {
-    display: grid;
-    grid-template-columns: 55% 45%;
+  .heroPartners {
+    display: flex;
+    position: relative;
+    top: 175px;
+    left: 150px;
+    font-size: 2em;
+    z-index: 18;
+    color: black;
+    width: 400px;
   }
-  .contactHeader, .contactThanks {
-    width:100%;
-    display:flex;
+
+  .heroContact {
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size:3em;
-    margin-top:25px;
-  }
-
-  .convertUser{
-    display: grid;
-    grid-template-columns: 55% 45%;
-  }
-  .contactForm {
-    background-color:#cccdce;
+    position: relative;
+    font-family: "Fira Sans", sans-serif;
+    top: 225px;
+    left: 220px;
+    height: 75px;
+    width: 200px;
+    background: white;
+    color: #170c6b;
+    z-index: 19;
+    font-size: 1.85em;
     border-radius: 5px;
-    margin-left:40px;
-    margin-top:25px;
-    height:82%;
-    width:85%;
   }
-  .inputForm{
-    display:grid;
-    grid-template-rows:10% 10% 10% 40%;
-  }
-  .inputName{
-    margin-left:20px;
-    margin-top:25px;
-    height:25px;
-    width:300px;
-    border-radius:2px;
-  }
-  .inputPhone, .inputEmail{
-    margin-top:25px;
-    margin-left:20px;
-    width:300px;
-    height:25px;
-    border-radius:2px;
-  }
-   .inputSend{
-     margin-top:25px;
-     margin-left:20px;
-     width:307px;
-     height:25px;
-     border-radius:2px;
-   }
-  .inputTextArea{
-    margin-top:25px;
-    margin-left:20px;
-    width:300px;
-    height:200px;
-    border-radius:2px;
-  }
-  .contactDetails{
-    border:1px solid black;
-    width:90%;
-    height:81.5%;
-    margin-top:25px;
-    margin-left:25px;
-    border-radius:5px;
-  }
-  .mobileAbout{
-    z-index:0 !important;
-  }
-  .show{
-    display:grid;
-  }
-  .hide{
-    display:none;
-  }
-}
-
-@media only screen and (min-width:828px) and (max-width: 1024px) {
-  body{
-    margin:0px;
-  }
-  .navbar {
-    display:grid;
-    width:100%;
-    position:fixed;
-    top:0;
-    grid-template-columns:10% 45% 13.5% 10% 11.5% 10%;
-    height:105px;
+  .heroContact:hover {
+    color: blue;
+    font-weight: bold;
     background-color: white;
-    border-bottom: 1px solid gray;
-    z-index:21;
-    margin-bottom:0px;
-  }
-  .logo, .navWorkShops, .navAbout, .navContact, .navServices, .navResources{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-family:'Fira Sans', sans-serif;
-    color:#170c6b;
-  }
-  .logo{
-    font-size:2em;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  .logo img:hover{
-    cursor:pointer;
-  }
-  .navAbout, .navWhiteSpace{
-    display:none;
-  }
-  .navBurger{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /*font-size:1.8em;*/
-    margin-left:0px;
-    color:#170c6b;
-  }
-  .navBurger:hover{
-    /*font-size:3.8em;*/
-    color:white;
-    background-color:#990106;
     cursor: pointer;
   }
-  .contact{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .heroWrapper{
-    /*margin-top:10px;*/
-    overflow: hidden;
-    height:93.1vh;
-    min-height: 671px;
-    z-index:2;
-    background-image:url('https://i.imgur.com/TGlZESH.jpg');
-    width:100%;
-    height:100%;
-    background-size:cover;
-    margin-top:100px;
-    background-repeat: no-repeat;
-  }
-
-  .heroWrapper img{
-    width:110%;
-    margin-top:-120px;
-  }
-  .graySwitch:hover{
-    font-size:1.2em;
-    cursor:pointer;
-    color:white;
-    background-color: #990106;
-  }
-  .logoImage{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:173px;
-    margin-left:30px;
-    z-index:1
-  }
-  .navSlogan{
-    display:none;
-  }
-  .middleWrapper{
+  .middleWrapper {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    width: 100%;
     position: relative;
-    background: #5C97FF;
+    background: #5c97ff;
     overflow: hidden;
-    opacity:1;
-    z-index:1;
-    height:91vh;
-    min-height:671px;
-    overflow:hidden;
+    opacity: 1;
+    z-index: 1;
+    height: 100vh;
+    min-height: 850px;
+    overflow: hidden;
     background-color: white;
-    display:grid;
-    grid-template-columns: 60% 40%;
   }
-  .middleWrapper:before{
-    content: ' ';
+  .middleWrapper:before {
+    content: " ";
     display: block;
     position: absolute;
     left: 0;
@@ -1720,337 +1965,351 @@ and (orientation : landscape) {
     margin-left: 0px;
     z-index: -1;
     opacity: 0.7;
-    background-image: url('https://i.imgur.com/XEqiYOT.jpg');
-    background-attachment:fixed;
+    background-image: url("https://i.imgur.com/XEqiYOT.jpg");
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position:"center";
+    background-position: "center";
     -ms-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     background-size: 120%;
-}
-  .problemSolution{
-    margin-top:25px;
-    margin-left:25px;
-    display:grid;
-    grid-template-rows: 1fr 1fr;
   }
-  .problemStatement{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    color:black;
-    font-size:2.2em;
-    font-weight: bold;
-    padding-left:60px;
-    padding-right:60px;
-    line-height: 150%;
-    width: 70%;
-    height:90%;
-    /*border:1px solid black;*/
+  .middleWrapper {
+    grid-row: 1;
   }
-  .solutionStatement{
-    display:flex;
-    font-family: 'Bitter', serif;
-    justify-content: center;
-    align-items: center;
-    color:black;
-    font-size:2em;
-    font-weight: bold;
-    margin-left:50px;
-    padding-left:10px;
-    padding-right:60px;
-    line-height: 150%;
-    margin-top: 30px;
-    /*background-color: white;*/
-    width: 75%;
-    height:90%;
-    /*border:1px solid black;*/
+  .middleWrapper div:nth-of-type(1) {
+    order: 2;
   }
-  .exampleSolution{
-    display:grid;
-    grid-template-rows:45% 5% 50%;
-    /*border:1px solid black;*/
-    height:91.3%;
-    width:90%;
-    margin-top:25px;
+  .middleWrapper div:nth-of-type(2) {
+    order: 1;
   }
-  .studentData{
-    display:flex;
-    justify-content: center;
-    align-items:center;
-    font-size: 1.2em;
-    padding-top:0px;
+  .middleLeft {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: -100px;
   }
-  .exampleSolution div img{
-    height:250px;
-    border-radius: 50%;
-    display:block;
-    margin-top:20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top:8
-  }
-  .exampleTestimonial{
-    display:flex;
-    justify-content: center;
-    font-family: 'Bitter', serif;
-    padding-left:15px;
-    padding-right:15px;
-    align-items: center;
-    font-size:1.7em;
-  }
-
-  .heroName{
-    display:flex;
-    position:relative;
-    top:150px;
-    left:50px;
-    font-size:4em;
-    z-index:19;
-    color:black;
-  }
-  .heroPartners{
-    display:flex;
-    position:relative;
-    position:relative;
-
-    top:50px;
-    left:75px;
-    font-size:2.5em;
-    z-index:18;
-    color:black;
-    width:400px;
-  }
-  .heroGraduates{
-    display:flex;
-    position:relative;
-    top:185px;
-    left:150px;
-    font-size:2em;
-    z-index:18;
-    color:black;
-    width:60%;
-  }
-  .heroContact{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position:relative;
-    font-family:'Fira Sans', sans-serif;
-    top:75px;
-    left:175px;
-    height:75px;
-    width:200px;
-    background: white;
-    color:#170c6b;
-    z-index:19;
-    font-size:1.85em;
-    border-radius:5px;
-  }
-  .heroContact:hover{
-    color:white;
-    font-weight: bold;
-    font-family:'Fira Sans', sans-serif;
-    background-color:#990106;
-    cursor:pointer;
-    font-size:2em;
-  }
-  .mobileNav{
-    margin-bottom:-105px !important;
-    padding-top:105px;
-    z-index:0;
-  }
-  .mobileNav div{
-    height:90px;
-    color:#170c6b;
-    border-bottom:1px solid black;
+  .middleSubLeft,
+  .middleSubRight {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column-reverse;
+    flex: 1;
+  }
+  .middleRight {
+    height: 100%;
+    padding: 15px 25px 15px 50px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    background-color:white;
-    padding-left:30px;
-    font-size:1.5em;
+    font-size: 2.9em;
+    font-weight: bold;
+    font-family: "Fira Sans", sans-serif;
   }
-  .mobileNav div:hover{
-    background-color:#990106;
-    color:white;
-    font-size:1.9em;
+  .middleSubLeft div,
+  .middleSubRight div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .mobileWorkshops, .mobileContact, .mobileServices, .mobileResources{
-    display:none !important;
+  .middleSubLeft div:nth-child(1),
+  .middleSubRight div:nth-child(1) {
+    margin-top: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .middleSubLeft div img,
+  .middleSubRight div img {
+    width: 45%;
+    border-radius: 50%;
   }
 
-  .contactWrapper{
-    display:grid;
+  .middleSubLeft div:nth-child(2),
+  .middleSubRight div:nth-child(2) {
+    padding: 0px 30px 30px 30px;
+    margin-top: -50px;
+    line-height: 130%;
+    font-size: 1.2em;
+  }
+  .middleSubLeft div:nth-child(3),
+  .middleSubRight div:nth-child(3) {
+    padding: 50px 30px 30px 30px;
+    font-size: 1.1em;
+  }
+
+  .contactWrapper {
+    display: grid;
     grid-template-rows: 10% 90%;
-    height:91vh;
+    height: 91vh;
     min-height: 650px;
   }
   .contactWrapperHeader {
     display: grid;
     grid-template-columns: 55% 45%;
   }
-  .contactHeader, .contactThanks {
-    width:100%;
-    display:flex;
+  .contactHeader,
+  .contactThanks {
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size:3em;
-    margin-top:25px;
+    font-size: 3em;
+    margin-top: 25px;
   }
 
-  .convertUser{
+  .convertUser {
     display: grid;
     grid-template-columns: 55% 45%;
   }
   .contactForm {
-    background-color:#cccdce;
+    background-color: #cccdce;
     border-radius: 5px;
-    margin-left:40px;
-    margin-top:25px;
-    height:82%;
-    width:85%;
+    margin-left: 40px;
+    margin-top: 25px;
+    height: 82%;
+    width: 85%;
   }
-  .inputForm{
-    display:grid;
-    grid-template-rows:10% 10% 10% 40%;
+  .inputForm {
+    display: grid;
+    grid-template-rows: 10% 10% 10% 40%;
   }
-  .inputName{
-    margin-left:20px;
-    margin-top:25px;
-    height:25px;
-    width:300px;
-    border-radius:2px;
+  .inputName {
+    margin-left: 20px;
+    margin-top: 25px;
+    height: 25px;
+    width: 300px;
+    border-radius: 2px;
   }
-  .inputPhone, .inputEmail{
-    margin-top:25px;
-    margin-left:20px;
-    width:300px;
-    height:25px;
-    border-radius:2px;
+  .inputPhone,
+  .inputEmail {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 300px;
+    height: 25px;
+    border-radius: 2px;
   }
-   .inputSend{
-     margin-top:25px;
-     margin-left:20px;
-     width:307px;
-     height:25px;
-     border-radius:2px;
-   }
-  .inputTextArea{
-    margin-top:25px;
-    margin-left:20px;
-    width:300px;
-    height:200px;
-    border-radius:2px;
+  .inputSend {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 307px;
+    height: 25px;
+    border-radius: 2px;
   }
-  .contactDetails{
-    border:1px solid black;
-    width:90%;
-    height:81.5%;
-    margin-top:25px;
-    margin-left:25px;
-    border-radius:5px;
+  .inputTextArea {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 300px;
+    height: 200px;
+    border-radius: 2px;
   }
-  .mobileAbout{
-    z-index:0 !important;
+  .contactDetails {
+    border: 1px solid black;
+    width: 90%;
+    height: 81.5%;
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 5px;
   }
-  .show{
-    display:grid;
+  .footerWrapper {
+    display: grid;
+    grid-template-columns: 35% 20% 35% 10%;
+    height: 100px;
+    border: 1px solid black;
+    font-family: "Fira Sans", sans-serif;
   }
-  .hide{
-    display:none;
+  .footerWrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-
+  .footerWrapper div:nth-child(1) {
+    font-size: 2em;
+  }
+  .footerWrapper div:nth-child(3) {
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 2em;
+  }
+  .footerWrapper div:nth-child(4) {
+    width: 80%;
+    font-style: italic;
+  }
+  .show {
+    display: grid;
+  }
+  .hide {
+    display: none;
+  }
 }
-@media only screen and (min-width:1025px) and (max-width: 2560px) {
-  body{
-    margin:0px;
+
+@media only screen and (min-width: 828px) and (max-width: 1024px) {
+  body {
+    margin: 0px;
   }
   .navbar {
-    display:grid;
-    width:100%;
-    position:fixed;
-    top:0;
-    grid-template-columns:15% 20% 12% 13% 10% 10% 10% 10%;
-    height:90px;
+    display: grid;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    grid-template-columns: 10% 24% 13.5% 10% 11.5% 10% 21%;
+    height: 105px;
     background-color: white;
     border-bottom: 1px solid gray;
-    z-index:20;
+    z-index: 21;
+    margin-bottom: 0px;
   }
-  .logo, .navWorkShops, .navAbout, .navContact, .navServices, .navResources, .navSlogan{
-    display:flex;
+  .logo,
+  .navWorkShops,
+  .navAbout,
+  .navContact,
+  .navServices,
+  .navResources,
+  .navCurrentStudents {
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-family:'Fira Sans', sans-serif;
-    color:#170c6b;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
   }
-  .graySwitch:hover{
-    font-size:1.2em;
-    cursor:pointer;
-    color:white;
+  .logo {
+    font-size: 2em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .logo img:hover {
+    cursor: pointer;
+  }
+  .navAbout,
+  .navWhiteSpace,
+  .navSlogan {
+    display: none;
+  }
+
+  .navBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    color: #170c6b;
+  }
+  .navBurger:hover {
+    color: white;
+    background-color: #990106;
+    cursor: pointer;
+  }
+  .logoImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 173px;
+    margin-left: 30px;
+    z-index: 1;
+  }
+  .graySwitch:hover {
+    font-size: 1.2em;
+    cursor: pointer;
+    color: white;
     background-color: #990106;
   }
-  .logo{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size:2em;
+
+  .mobileNav a:hover {
+    background-color: #990106;
+    color: white;
+    font-size: 1.9em;
   }
-  .logoImage{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width:140px;
-    margin-left:30px;
-    z-index:1
+  .mobileWorkshops,
+  .mobileContact,
+  .mobileServices,
+  .mobileResources,
+  .mobileCurrentStudents {
+    display: none !important;
   }
-  .logo img:hover{
-    cursor:pointer;
+
+  .mobileNav {
+    margin-bottom: -105px !important;
+    padding-top: 105px;
+    z-index: 0;
   }
-  .navSlogan{
-    display:flex;
+  .mobileNav a {
+    height: 90px;
+    color: #170c6b;
+    border-bottom: 1px solid black;
+    display: flex;
     justify-content: flex-start;
-    align-items:center;
-    z-index:2;
-    margin-left:-10px;
+    align-items: center;
+    background-color: white;
+    padding-left: 30px;
+    font-size: 1.5em;
   }
-  .navBurger{
-    display:none;
+
+  .heroWrapper {
+    overflow: hidden;
+    height: 93.1vh;
+    min-height: 671px;
+    z-index: 2;
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    margin-top: 100px;
+    background-repeat: no-repeat;
   }
-  .contact{
-    display:flex;
+  .heroPartners {
+    display: flex;
+    position: relative;
+    top: 50px;
+    left: 75px;
+    font-size: 2.5em;
+    z-index: 18;
+    color: black;
+    width: 400px;
+  }
+
+  .heroContact {
+    display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .heroWrapper{
-    margin-top:55px;
-    max-height:100vh;
-    overflow: hidden;
-    min-height: 675px;
-    z-index:2;
-    background-image:url('https://i.imgur.com/TGlZESH.jpg');
-    width:100%;
-    height:100%;
-    /*background-position: top right;*/
-    background-size:cover;
-  }
-  .problemWrapper{
     position: relative;
-    background: #5C97FF;
-    overflow: hidden;
-    opacity:1;
-    z-index:1;
-    height:89.8vh;
-    min-height:671px;
-    overflow:hidden;
-    background-color: white;
-    display:grid;
-    grid-template-columns: 2fr 1fr;
+    font-family: "Fira Sans", sans-serif;
+    top: 75px;
+    left: 175px;
+    height: 75px;
+    width: 200px;
+    background: white;
+    color: #170c6b;
+    z-index: 19;
+    font-size: 1.85em;
+    border-radius: 5px;
   }
-  .problemWrapper:before{
-    content: ' ';
+  .heroContact:hover {
+    color: white;
+    font-weight: bold;
+    font-family: "Fira Sans", sans-serif;
+    background-color: #990106;
+    cursor: pointer;
+    font-size: 2em;
+  }
+
+  .middleWrapper {
+    display: grid;
+    grid-template-rows: 20% 80%;
+    width: 100%;
+    position: relative;
+    background: #5c97ff;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 1;
+    height: 100vh;
+    min-height: 850px;
+    overflow: hidden;
+    background-color: white;
+  }
+  .middleWrapper:before {
+    content: " ";
     display: block;
     position: absolute;
     left: 0;
@@ -2061,268 +2320,502 @@ and (orientation : landscape) {
     margin-left: 0px;
     z-index: -1;
     opacity: 0.7;
-    background-image: url('https://i.imgur.com/XEqiYOT.jpg');
-    background-attachment:fixed;
+    background-image: url("https://i.imgur.com/XEqiYOT.jpg");
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position:"center";
+    background-position: "center";
     -ms-background-size: cover;
     -o-background-size: cover;
     -moz-background-size: cover;
     -webkit-background-size: cover;
-    background-size: 125%;
-}
-  .problemSolution{
-    margin-top:25px;
-    margin-left:25px;
-    display:grid;
-    grid-template-rows: 1fr 1fr;
+    background-size: 120%;
   }
-  .problemStatement{
-    display:flex;
+  .middleWrapper {
+    grid-row: 1;
+  }
+  .middleWrapper div:nth-of-type(1) {
+    order: 2;
+  }
+  .middleWrapper div:nth-of-type(2) {
+    order: 1;
+  }
+  .middleLeft {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: -100px;
+  }
+  .middleSubLeft,
+  .middleSubRight {
+    display: flex;
+    flex-direction: column-reverse;
+    flex: 1;
+  }
+  .middleRight {
+    height: 100%;
+    padding: 15px 25px 15px 50px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    color:black;
-    font-size:2.8em;
+    font-size: 2.9em;
     font-weight: bold;
-    padding-left:60px;
-    padding-right:60px;
-    line-height: 150%;
-    width: 70%;
-    height:90%;
-    /*border:1px solid black;*/
+    font-family: "Fira Sans", sans-serif;
   }
-  .solutionStatement{
-    display:flex;
-    font-family: 'Bitter', serif;
+  .middleSubLeft div,
+  .middleSubRight div {
+    display: flex;
     justify-content: center;
     align-items: center;
-    color:black;
-    font-size:2.7em;
-    font-weight: bold;
-    margin-left:50px;
-    padding-left:10px;
-    padding-right:60px;
-    line-height: 150%;
-    margin-top: 30px;
-    /*background-color: white;*/
-    width: 75%;
-    height:90%;
-    /*border:1px solid black;*/
   }
-  .exampleSolution{
-    display:grid;
-    grid-template-rows:50% 10% 40%;
-    /*border:1px solid black;*/
-    height:630px;
-    width:90%;
-    margin-top:25px;
-  }
-  .studentData{
-    display:flex;
+  .middleSubLeft div:nth-child(1),
+  .middleSubRight div:nth-child(1) {
+    margin-top: -25px;
+    display: flex;
     justify-content: center;
-    align-items:center;
-    font-size: 1.2em;
-    padding-top:5px;
+    align-items: center;
+    height: 100%;
+    width: 100%;
   }
-  .exampleSolution div img{
-    height:300px;
+  .middleSubLeft div img,
+  .middleSubRight div img {
+    width: 45%;
     border-radius: 50%;
-    display:block;
-    margin-top:10px;
-    margin-left: auto;
-    margin-right:auto;
-    opacity:1!important;
   }
-  .exampleTestimonial{
-    display:flex;
-    justify-content: center;
-    font-family: 'Bitter', serif;
-    padding-left:15px;
-    padding-right:15px;
-    align-items: flex-start;
-    font-size:1.6em;
-    opacity:1;
-    /*padding-bottom:40px;*/
-    /*letter-spacing: 0.01em;*/
+
+  .middleSubLeft div:nth-child(2),
+  .middleSubRight div:nth-child(2) {
+    padding: 0px 30px 30px 30px;
+    margin-top: -50px;
+    line-height: 130%;
+    font-size: 1.2em;
   }
-  .heroWrapper img{
-    margin-top:25px;
-    width:100%;
-    min-height:730px;
+  .middleSubLeft div:nth-child(3),
+  .middleSubRight div:nth-child(3) {
+    padding: 50px 30px 30px 30px;
+    font-size: 1.1em;
   }
-  .heroName{
-    position:absolute;
-    top:175px;
-    left:50px;
-    font-size:5em;
-    z-index:19;
-    color:black;
+  .contactWrapper {
+    display: grid;
+    grid-template-rows: 10% 90%;
+    height: 91vh;
+    min-height: 650px;
   }
-  .heroPartners{
-    position:absolute;
-    top:150px;
-    left:60px;
-    font-family:"Fira Sans", sans-serif;
-    z-index:19;
-    color:black;
-    width:500px;
-    font-size:3.1em;
+  .contactWrapperHeader {
+    display: grid;
+    grid-template-columns: 55% 45%;
   }
-  .heroGraduates{
-    position:absolute;
-    top:320px;
-    left:190px;
-    font-size:2em;
-    z-index:2;
-    color:black;
-    width:60%;
-    z-index:19;
-    font-size:2.4em;
-  }
-  .heroContact{
-    display:flex;
+  .contactHeader,
+  .contactThanks {
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position:absolute;
-    font-family:'Fira Sans', sans-serif;
-    top:400px;
-    left:225px;
-    height:75px;
-    width:200px;
+    font-size: 3em;
+    margin-top: 25px;
+  }
+
+  .convertUser {
+    display: grid;
+    grid-template-columns: 55% 45%;
+  }
+  .contactForm {
+    background-color: #cccdce;
+    border-radius: 5px;
+    margin-left: 40px;
+    margin-top: 25px;
+    height: 82%;
+    width: 85%;
+  }
+  .inputForm {
+    display: grid;
+    grid-template-rows: 10% 10% 10% 40%;
+  }
+  .inputName {
+    margin-left: 20px;
+    margin-top: 25px;
+    height: 25px;
+    width: 300px;
+    border-radius: 2px;
+  }
+  .inputPhone,
+  .inputEmail {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 300px;
+    height: 25px;
+    border-radius: 2px;
+  }
+  .inputSend {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 307px;
+    height: 25px;
+    border-radius: 2px;
+  }
+  .inputTextArea {
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 300px;
+    height: 200px;
+    border-radius: 2px;
+  }
+  .contactDetails {
+    border: 1px solid black;
+    width: 90%;
+    height: 81.5%;
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 5px;
+  }
+  .footerWrapper {
+    display: grid;
+    grid-template-columns: 35% 20% 35% 10%;
+    height: 100px;
+    border: 1px solid black;
+    font-family: "Fira Sans", sans-serif;
+  }
+  .footerWrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerWrapper div:nth-child(1) {
+    font-size: 1.7em;
+  }
+  .footerWrapper div:nth-child(3) {
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 2em;
+  }
+  .footerWrapper div:nth-child(4) {
+    width: 80%;
+    font-style: italic;
+  }
+  .show {
+    display: grid;
+  }
+  .hide {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    margin: 0px;
+  }
+  .navbar {
+    display: grid;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    grid-template-columns: 15% 5% 12% 13% 10% 10% 10% 10% 15%;
+    height: 90px;
+    background-color: white;
+    border-bottom: 1px solid gray;
+    z-index: 20;
+  }
+  .logo,
+  .navWorkShops,
+  .navAbout,
+  .navContact,
+  .navServices,
+  .navResources,
+  .navSlogan,
+  .navCurrentStudents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
+  }
+
+  .graySwitch:hover {
+    font-size: 1.2em;
+    cursor: pointer;
+    color: white;
+    background-color: #990106;
+  }
+  .logoImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    margin-left: 30px;
+    z-index: 1;
+  }
+  .logo img:hover {
+    cursor: pointer;
+  }
+  .navSlogan {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-style: italic;
+    z-index: 2;
+    margin-left: -10px;
+  }
+  .navBurger {
+    display: none;
+  }
+  .mobileAbout {
+    z-index: 0 !important;
+  }
+  .mobileNav {
+    display: none;
+  }
+  .heroWrapper {
+    margin-top: 55px;
+    max-height: 100vh;
+    overflow: hidden;
+    min-height: 675px;
+    z-index: 2;
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  .heroPartners {
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    font-family: "Fira Sans", sans-serif;
+    z-index: 19;
+    color: black;
+    width: 500px;
+    font-size: 3.1em;
+  }
+  .heroContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    font-family: "Fira Sans", sans-serif;
+    top: 400px;
+    left: 225px;
+    height: 75px;
+    width: 200px;
     background: white;
-    color:#170c6b;
-    z-index:19;
-    font-size:1.85em;
-    border-radius:5px;
+    color: #170c6b;
+    z-index: 19;
+    font-size: 1.85em;
+    border-radius: 5px;
   }
-  .heroContact:hover{
-    color:white;
+  .heroContact:hover {
+    color: white;
     font-weight: bold;
-    font-family:'Fira Sans', sans-serif;
-    background-color:#990106;
-    cursor:pointer;
-    font-size:2em;
+    font-family: "Fira Sans", sans-serif;
+    background-color: #990106;
+    cursor: pointer;
+    font-size: 2em;
   }
-  .contactWrapper{
-    display:grid;
+  .middleMobileWrapper {
+    display: none;
+  }
+  .middleWrapper {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    width: 100%;
+    max-height: 110vh;
+    min-height: 625px;
+    position: relative;
+    background: #5c97ff;
+    overflow: hidden;
+    opacity: 1;
+    z-index: 1;
+    min-height: 671px;
+    overflow: hidden;
+    background-color: white;
+  }
+  .middleWrapper:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-left: 100px;
+    margin-left: 0px;
+    z-index: -1;
+    opacity: 0.7;
+    background-image: url("https://i.imgur.com/XEqiYOT.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top right -60px;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: 140%;
+  }
+  .middleLeft {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .middleSubLeft,
+  .middleSubRight {
+    font-family: "Fira Sans", sans-serif;
+    display: grid;
+    grid-template-rows: 40% 45% 15%;
+  }
+  .middleSubLeft div,
+  .middleSubRight div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .middleSubLeft div:nth-child(1),
+  .middleSubRight div:nth-child(1) {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  .middleSubLeft div img,
+  .middleSubRight div img {
+    width: 45%;
+    border-radius: 50%;
+  }
+
+  .middleSubLeft div:nth-child(2),
+  .middleSubRight div:nth-child(2) {
+    padding: 30px;
+    line-height: 130%;
+    font-size: 1.2em;
+  }
+  .middleSubLeft div:nth-child(3),
+  .middleSubRight div:nth-child(3) {
+    padding: 10px 30px 30px 30px;
+    font-size: 1.1em;
+  }
+  .middleRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.2em;
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    padding: 15px;
+  }
+  .contactWrapper {
+    display: grid;
     grid-template-rows: 10% 90%;
-    height:91vh;
+    height: 91vh;
     min-height: 650px;
   }
   .contactWrapperHeader {
     display: grid;
     grid-template-columns: 45% 55%;
   }
-  .contactHeader, .contactThanks {
-    width:100%;
-    display:flex;
+  .contactHeader,
+  .contactThanks {
+    width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    font-size:3em;
-    margin-top:25px;
+    font-size: 3em;
+    margin-top: 25px;
   }
-
-  .convertUser{
+  .convertUser {
     display: grid;
     grid-template-columns: 45% 55%;
   }
-  .contactForm{
-    background-color:#cccdce;
+  .contactForm {
+    background-color: #cccdce;
     border-radius: 5px;
-    margin-left:70px;
-    margin-top:25px;
-    height:82%;
-    width:85%;
+    margin-left: 70px;
+    margin-top: 25px;
+    height: 82%;
+    width: 85%;
   }
-  .inputForm{
-    display:grid;
-    grid-template-rows:10% 10% 10% 40%;
+  .inputForm {
+    display: grid;
+    grid-template-rows: 10% 10% 10% 40%;
   }
-  .inputName{
-    margin-left:40px;
-    margin-top:25px;
-    height:25px;
-    width:300px;
-    border-radius:2px;
+  .inputName {
+    margin-left: 40px;
+    margin-top: 25px;
+    height: 25px;
+    width: 300px;
+    border-radius: 2px;
   }
-  .inputPhone, .inputEmail{
-    margin-top:25px;
-    margin-left:40px;
-    width:300px;
-    height:25px;
-    border-radius:2px;
+  .inputPhone,
+  .inputEmail {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 300px;
+    height: 25px;
+    border-radius: 2px;
   }
-   .inputSend{
-     margin-top:25px;
-     margin-left:40px;
-     width:307px;
-     height:25px;
-     border-radius:2px;
-   }
-  .inputTextArea{
-    margin-top:25px;
-    margin-left:40px;
-    width:300px;
-    height:200px;
-    border-radius:2px;
+  .inputSend {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 307px;
+    height: 25px;
+    border-radius: 2px;
   }
-  .contactDetails{
-    border:1px solid black;
-    width:90%;
-    height:81.5%;
-    margin-top:25px;
-    margin-left:25px;
-    border-radius:5px;
+  .inputTextArea {
+    margin-top: 25px;
+    margin-left: 40px;
+    width: 300px;
+    height: 200px;
+    border-radius: 2px;
   }
-  .mobileAbout{
-    z-index:0 !important;
+  .contactDetails {
+    border: 1px solid black;
+    width: 90%;
+    height: 81.5%;
+    margin-top: 25px;
+    margin-left: 25px;
+    border-radius: 5px;
   }
-  .mobileNav {
-    display:none;
+  .footerWrapper {
+    display: grid;
+    grid-template-columns: 30% 30% 30% 10%;
+    height: 100px;
+    border: 1px solid black;
+    font-family: "Fira Sans", sans-serif;
   }
-
+  .footerWrapper div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footerWrapper div:nth-child(1) {
+    font-size: 1.8em;
+  }
+  .footerWrapper div:nth-child(3) {
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 20px;
+    font-size: 2em;
+  }
+  .footerWrapper div:nth-child(4) {
+    width: 80%;
+    font-style: italic;
+  }
 }
-@media only screen and (mind-width:2561px) and (max-width: 2880px) {
-  body{
-    margin:0px;
-  }
-  .navbar {
-    display:grid;
-    position:fixed;
-    top:0;
-    width:100%;
-    grid-template-columns:10% 40% 10% 10% 10% 10% 10%;
-    height:75px;
-    background-color: white;
-    border-bottom: 1px solid black;
-  }
-  .logo, .navWorkShops, .navAbout, .navContact, .navServices, .navResources{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .navBurger{
-    display:none;
-  }
-  .contact{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .graySwitch:hover{
-    font-size:1.2em;
-    cursor:pointer;
-    color:white;
-    background-color: #D7D6D4;
-  }
-  .contactWrapper {
-    height:100vh;
-    background-color: lightblue;
-    overflow:hidden;
-  }
-  img{
-    margin-top:-150px;
-    /*margin-left:-120px;*/
-    width:100%;
-  }
+
+.navbar a,
+.navbar a:visited,
+.mobileNav a,
+.mobileNav a:visited {
+  text-decoration: none;
+}
+.mobileNav a {
+  height: 90px;
+  color: #170c6b;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: white;
+  padding-left: 30px;
+  font-size: 1.5em;
+}
+.mobileNav a:hover{
+  color:white;
+  background-color:#990106;
 }
