@@ -21,6 +21,18 @@ class App extends Component {
       clicked:false
     }
   }
+  componentDidMount(){
+    window.addEventListener('scroll', this.handleScroll)
+  }
+  componentWillUnmount(){
+    window.removeEventListener('scroll', this.handleScroll)
+  }
+
+  handleScroll(event){
+    if(window.scrollY>105){
+      console.log('scrolling');
+    }
+  }
 
   render() {
     return (

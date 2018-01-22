@@ -28,7 +28,7 @@ update(data)
       <NavLink to="/resources" className="navResources graySwitch">Resources</NavLink>
       <NavLink to="/about" className="navAbout graySwitch">About</NavLink>
       <div className="navContact graySwitch">Contact</div>
-      <a target="_blank" href="https://www.collegeplannerpro.com/" className="navCurrentStudents graySwitch">Current Students</a>
+      <a target="_blank" href="https://collegeroutemap.customcollegeplan.com/" className="navCurrentStudents graySwitch">Current Students</a>
     </div>
   )
 

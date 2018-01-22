@@ -99,11 +99,34 @@
     grid-template-rows: 1fr;
     width: 100%;
   }
-  .heroWrapper {
+  .contactBannerWrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    height:75px;
+    border-top:1px solid #170c6b;
+    border-bottom:1px solid #170c6b;
+  }
+
+  .contactBannerWrapper div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size:.84em;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
+  }
+  .contactBannerWrapper div:hover{
+    color:white;
+    background-color: #990106;
+    cursor: pointer;
+    font-size:.84em;
+  }
+  .heroWrapper, .workshopHeroWrapper {
     overflow: hidden;
     max-height: 100vh;
     min-height: 950px;
-    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    /*background-image: url("https://i.imgur.com/TGlZESH.jpg");*/
     width: 100% !important;
     height: 100%;
     background-position: top right -200px;
@@ -111,6 +134,61 @@
     background-size: cover;
     min-height: 500px;
     margin-top: 100px;
+  }
+  .workshopHeroWrapper{
+    /*background-image:url("https://i.imgur.com/HzuBnkb.png");*/
+  }
+  .heroWrapper{
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+  }
+  .workshopHeroWrapper{
+    background-position: center center;
+    border-bottom:1px solid black;
+    position:relative;
+    z-index:-1;
+  }
+  .workshopHeroWrapper:before{
+    content:" ";
+    display: block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.8;
+    background-image:url("https://i.imgur.com/HzuBnkb.png");
+    background-position: center center;
+    margin-top:20px;
+    background-repeat: no-repeat;
+    /*background-size: contain;*/
+    background-size:200%;
+  }
+  .workshopSlogans{
+    position:relative;
+    padding-top:0px;
+    height:250px;
+    width:100%;
+    display:grid;
+    grid-template-rows: 70% 30%;
+    background-color: white;
+
+  }
+  .workshopSlogans div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .workshopSlogans div:nth-child(1){
+    font-family: "Fira Sans", sans-serif;
+    align-items: center;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  .workshopSlogans div:nth-child(2){
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    align-items: flex-start;
   }
   .heroPartners {
     display: flex;
@@ -435,18 +513,97 @@
     color: white;
     cursor: pointer;
   }
+  .contactBannerWrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    height:75px;
+    border-top:1px solid #170c6b;
+    border-bottom:1px solid #170c6b;
+  }
 
-  .heroWrapper {
+  .contactBannerWrapper div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size:.98em;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
+  }
+  .contactBannerWrapper div:hover{
+    color:white;
+    background-color: #990106;
+    cursor: pointer;
+    font-size:.98em;
+  }
+
+  .heroWrapper, .workshopHeroWrapper {
     overflow: hidden;
     max-height: 100vh;
     min-height: 750px;
-    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    /*background-image: url("https://i.imgur.com/TGlZESH.jpg");*/
     width: 100%;
     height: 100%;
     background-position: top right -200px;
     background-repeat: no-repeat;
     /*background-position-x:left 100px;*/
     background-size: cover;
+  }
+  .workshopHeroWrapper{
+    /*background-image:url("https://i.imgur.com/HzuBnkb.png");*/
+  }
+
+  .heroWrapper{
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+  }
+  .workshopHeroWrapper{
+    background-position: center center;
+    border-bottom:1px solid black;
+    position:relative;
+    z-index:-1;
+  }
+  .workshopHeroWrapper:before{
+    content:" ";
+    display: block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.8;
+    background-image:url("https://i.imgur.com/HzuBnkb.png");
+    background-position: center center;
+    margin-top:20px;
+    background-repeat: no-repeat;
+    /*background-size: contain;*/
+    background-size:200%;
+  }
+  .workshopSlogans{
+    position:relative;
+    padding-top:100px;
+    height:275px;
+    width:100%;
+    display:grid;
+    grid-template-rows: 70% 30%;
+    background-color: white;
+
+  }
+  .workshopSlogans div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .workshopSlogans div:nth-child(1){
+    font-family: "Fira Sans", sans-serif;
+    align-items: center;
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  .workshopSlogans div:nth-child(2){
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    align-items: flex-start;
   }
   .heroPartners {
     display: flex;
@@ -767,19 +924,97 @@
     color: white;
     cursor: pointer;
   }
+  .contactBannerWrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    height:75px;
+    border-top:1px solid #170c6b;
+    border-bottom:1px solid #170c6b;
+  }
 
-  .heroWrapper {
+  .contactBannerWrapper div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size:1em;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
+  }
+  .contactBannerWrapper div:hover{
+    color:white;
+    background-color: #990106;
+    cursor: pointer;
+    font-size:1.05em;
+  }
+
+  .heroWrapper, .workshopHeroWrapper {
     overflow: hidden;
     max-height: 100vh;
     min-height: 750px;
-    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    /*background-image: url("https://i.imgur.com/TGlZESH.jpg");*/
     width: 100% !important;
     height: 100%;
     background-position: top right -200px;
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .workshopHeroWrapper{
+    /*min-height:650px;*/
+    /*background-image:url("https://i.imgur.com/HzuBnkb.png");*/
+  }
+  .heroWrapper{
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+  }
+  .workshopHeroWrapper{
+    background-position: center center;
+    border-bottom:1px solid black;
+    position:relative;
+    z-index:-1;
+  }
+  .workshopHeroWrapper:before{
+    content:" ";
+    display: block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.5;
+    background-image:url("https://i.imgur.com/HzuBnkb.png");
+    background-position: center center;
+    margin-top:20px;
+    background-repeat: no-repeat;
+    /*background-size: contain;*/
+    background-size:200%;
+  }
+  .workshopSlogans{
+    position:relative;
+    padding-top:100px;
+    height:275px;
+    width:100%;
+    display:grid;
+    grid-template-rows: 70% 30%;
+    background-color: white;
 
+  }
+  .workshopSlogans div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .workshopSlogans div:nth-child(1){
+    font-family: "Fira Sans", sans-serif;
+    align-items: center;
+    font-size: 4em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  .workshopSlogans div:nth-child(2){
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.25em;
+    align-items: flex-start;
+  }
   .heroPartners {
     display: flex;
     position: relative;
@@ -1111,19 +1346,95 @@
   .mobileCurrentStudents {
     display: none !important;
   }
+  .contactBannerWrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    height:75px;
+    border-top:1px solid #170c6b;
+    border-bottom:1px solid #170c6b;
+  }
 
-  .heroWrapper {
+  .contactBannerWrapper div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size:1.4em;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
+  }
+  .contactBannerWrapper div:hover{
+    color:white;
+    background-color: #990106;
+    cursor: pointer;
+    font-size:1.6em;
+  }
+
+  .heroWrapper, .workshopHeroWrapper {
     overflow: hidden;
     max-height: 100vh;
     min-height: 580px;
     margin-top: 75px;
     z-index: 1;
-    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+    /*background-image: url("https://i.imgur.com/TGlZESH.jpg");*/
     background-position: top right;
     /*width: 100%;
     height: 100%;*/
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  .workshopHeroWrapper{
+  }
+  .heroWrapper{
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+  }
+  .workshopHeroWrapper{
+    background-position: center center;
+    border-bottom:1px solid black;
+    position:relative;
+    z-index:-1;
+  }
+  .workshopHeroWrapper:before{
+    content:" ";
+    display: block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.5;
+    background-image:url("https://i.imgur.com/HzuBnkb.png");
+    background-position: center center;
+    margin-top:20px;
+    /*background-size: contain;*/
+    background-size:150%;
+  }
+  .workshopSlogans{
+    position:relative;
+    padding-top:50px;
+    height:225px;
+    width:100%;
+    display:grid;
+    grid-template-rows: 70% 30%;
+    background-color: white;
+
+  }
+  .workshopSlogans div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .workshopSlogans div:nth-child(1){
+    font-family: "Fira Sans", sans-serif;
+    align-items: center;
+    font-size: 5em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  .workshopSlogans div:nth-child(2){
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.4em;
+    align-items: flex-start;
   }
   .heroPartners {
     display: flex;
@@ -1515,19 +1826,94 @@
   .mobileCurrentStudents {
     display: none !important;
   }
+  .contactBannerWrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    height:75px;
+    border-top:1px solid #170c6b;
+    border-bottom:1px solid #170c6b;
+  }
 
-  .heroWrapper {
+  .contactBannerWrapper div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size:1.9em;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
+  }
+  .contactBannerWrapper div:hover{
+    color:white;
+    background-color: #990106;
+    cursor: pointer;
+    font-size:2.1em;
+  }
+
+  .heroWrapper, .workshopHeroWrapper {
     overflow: hidden;
     max-height: 100vh;
     min-height: 949px;
     margin-top: 75px;
     z-index: 1;
-    background-image: url("https://i.imgur.com/TGlZESH.jpg");
     background-position: top right -200px;
     /*width: 100%;
     height: 100%;*/
     background-size: cover;
     background-repeat: no-repeat;
+  }
+  .workshopHeroWrapper{
+  }
+  .heroWrapper{
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+  }
+  .workshopHeroWrapper{
+    background-position: center center;
+    border-bottom:1px solid black;
+    position:relative;
+    z-index:-1;
+  }
+  .workshopHeroWrapper:before{
+    content:" ";
+    display: block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.5;
+    background-image:url("https://i.imgur.com/HzuBnkb.png");
+    background-position: center center;
+    margin-top:20px;
+    /*background-size: contain;*/
+    background-size:150%;
+  }
+  .workshopSlogans{
+    position:relative;
+    padding-top:50px;
+    height:250px;
+    width:100%;
+    display:grid;
+    grid-template-rows: 70% 30%;
+    background-color: white;
+
+  }
+  .workshopSlogans div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .workshopSlogans div:nth-child(1){
+    font-family: "Fira Sans", sans-serif;
+    align-items: center;
+    font-size: 5em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  .workshopSlogans div:nth-child(2){
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.4em;
+    align-items: flex-start;
   }
   .heroPartners {
     display: flex;
@@ -1900,11 +2286,91 @@
   .mobileCurrentStudents {
     display: none !important;
   }
+  .contactBannerWrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    height:75px;
+    border-top:1px solid #170c6b;
+    border-bottom:1px solid #170c6b;
+  }
 
-  .heroWrapper {
+  .contactBannerWrapper div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size:1.9em;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
+  }
+  .contactBannerWrapper div:hover{
+    color:white;
+    background-color: #990106;
+    cursor: pointer;
+    font-size:2.1em;
+  }
+
+  .heroWrapper, .workshopHeroWrapper {
     overflow: hidden;
     max-height: 93.1vh;
     min-height: 690px !important;
+  }
+  .workshopHeroWrapper{
+  }
+  .heroWrapper{
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+  }
+  .workshopHeroWrapper{
+    background-position: center center;
+    border-bottom:1px solid black;
+    position:relative;
+    z-index:-1;
+  }
+  .workshopHeroWrapper:before{
+    content:" ";
+    display: block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.5;
+    background-image:url("https://i.imgur.com/HzuBnkb.png");
+    background-position: center center;
+    margin-top:20px;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    /*background-size:200%;*/
+
+  }
+  .workshopSlogans{
+    position:relative;
+    padding-top:50px;
+    height:250px;
+    width:100%;
+    display:grid;
+    grid-template-rows: 70% 30%;
+    background-color: white;
+
+  }
+  .workshopSlogans div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .workshopSlogans div:nth-child(1){
+    font-family: "Fira Sans", sans-serif;
+    align-items: center;
+    font-size: 5em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  .workshopSlogans div:nth-child(2){
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.4em;
+    align-items: flex-start;
   }
   .heroPartners {
     display: flex;
@@ -2245,18 +2711,93 @@
     padding-left: 30px;
     font-size: 1.5em;
   }
+  .contactBannerWrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    height:75px;
+    border-top:1px solid #170c6b;
+    border-bottom:1px solid #170c6b;
+  }
 
-  .heroWrapper {
+  .contactBannerWrapper div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size:1.9em;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
+  }
+  .contactBannerWrapper div:hover{
+    color:white;
+    background-color: #990106;
+    cursor: pointer;
+    font-size:2.1em;
+  }
+
+  .heroWrapper, .workshopHeroWrapper {
     overflow: hidden;
     height: 93.1vh;
     min-height: 671px;
     z-index: 2;
-    background-image: url("https://i.imgur.com/TGlZESH.jpg");
     width: 100%;
     height: 100%;
     background-size: cover;
     margin-top: 100px;
     background-repeat: no-repeat;
+  }
+  .workshopHeroWrapper{
+  }
+  .heroWrapper{
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+  }
+  .workshopHeroWrapper{
+    background-position: center center;
+    border-bottom:1px solid black;
+    position:relative;
+    z-index:-1;
+  }
+  .workshopHeroWrapper:before{
+    content:" ";
+    display: block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.5;
+    background-image:url("https://i.imgur.com/HzuBnkb.png");
+    background-position: center center;
+    margin-top:20px;
+    /*background-size: contain;*/
+    background-size:150%;
+  }
+  .workshopSlogans{
+    position:relative;
+    padding-top:50px;
+    height:250px;
+    width:100%;
+    display:grid;
+    grid-template-rows: 70% 30%;
+    background-color: white;
+
+  }
+  .workshopSlogans div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .workshopSlogans div:nth-child(1){
+    font-family: "Fira Sans", sans-serif;
+    align-items: center;
+    font-size: 5em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  .workshopSlogans div:nth-child(2){
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.4em;
+    align-items: flex-start;
   }
   .heroPartners {
     display: flex;
@@ -2563,16 +3104,107 @@
   .mobileNav {
     display: none;
   }
-  .heroWrapper {
+  .contactBannerWrapper{
+    display: grid;
+    grid-template-columns: 100%;
+    height:75px;
+    border-top:1px solid #170c6b;
+    border-bottom:1px solid #170c6b;
+  }
+  .contactBannerWrapper div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size:1.9em;
+    font-family: "Fira Sans", sans-serif;
+    color: #170c6b;
+  }
+  .contactBannerWrapper div:hover{
+    color:white;
+    background-color: #990106;
+    cursor: pointer;
+    font-size:2.1em;
+  }
+  .heroWrapper, .workshopHeroWrapper, .resourceHeroWrapper {
     margin-top: 55px;
     max-height: 100vh;
     overflow: hidden;
     min-height: 675px;
     z-index: 2;
-    background-image: url("https://i.imgur.com/TGlZESH.jpg");
     width: 100%;
     height: 100%;
     background-size: cover;
+  }
+  .heroWrapper{
+    background-image: url("https://i.imgur.com/TGlZESH.jpg");
+  }
+  .resourceHeroWrapper{
+    display:grid;
+    grid-template-rows: 85% 15%;
+    margin-top:105px;
+    min-height:625px;
+  }
+  .resourceContentWrapper {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height:525px;
+    grid-gap:1%;
+    margin-left:25px;
+    margin-right:25px;
+  }
+  .resourceContentWrapper div{
+    display: flex;
+    height:500px;
+    border:1px black solid;
+  }
+  .workshopHeroWrapper{
+    background-position: center center;
+    border-bottom:1px solid black;
+    position:relative;
+    z-index:1;
+  }
+  .workshopHeroWrapper:before{
+    content:" ";
+    display: block;
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    opacity:0.5;
+    background-image:url("https://i.imgur.com/HzuBnkb.png");
+    background-position: center center;
+    /*margin-top:20px;*/
+    background-size: 140%;
+  }
+  .workshopSlogans{
+    position:relative;
+    padding-top:20px;
+    height:280px;
+    width:100%;
+    display:grid;
+    grid-template-rows: 70% 30%;
+    background-color: white;
+    /*z-index:1;*/
+
+  }
+  .workshopSlogans div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .workshopSlogans div:nth-child(1){
+    font-family: "Fira Sans", sans-serif;
+    align-items: center;
+    font-size: 5em;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+  }
+  .workshopSlogans div:nth-child(2){
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.4em;
+    align-items: flex-start;
   }
   .heroPartners {
     position: absolute;
