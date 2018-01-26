@@ -1,11 +1,16 @@
 import React from 'react';
 import ContactBanner from './contactBanner'
 
-const WorkShopContent = () => {
+// <ContactBanner />
+
+const WorkShopContent = ({workshopHeroWrapper}) => {
   return (
-    <div className="workshopContentWrapper">
+    <div className="workshopContent">
+    <div></div>
+      <div>Workshop Content</div>
       <div></div>
-      <ContactBanner />
+      <div>Workshop Content</div>
+      <div></div>
     </div>
   )
 }

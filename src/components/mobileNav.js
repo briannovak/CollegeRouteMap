@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 const MobileNav = ({update, click}) => {
 
 const burger = (data) => {
-  console.log("burgerClick, mobile");
+  // console.log("burgerClick, mobile");
   if (data){
      return "mobileNav show"
   } else {
@@ -19,7 +19,7 @@ const burger = (data) => {
       <NavLink to="/services" className="mobileServices">Services</NavLink>
       <NavLink to="/resources" className="mobileResources">Resources</NavLink>
       <NavLink to="/about" className="mobileAbout">About</NavLink>
-      <a className="mobileContact">Contact</a>
+      <NavLink to="/contact" className="mobileContact">Contact</NavLink>
     </div>
   )
 }

@@ -1,12 +1,13 @@
 import React from 'react';
-// <div className="workshopsTitle">Workshops</div>
-// <div className="workshopsTagLine">Because somethings deserve more than googling.</div>
+
+
+
 const WorkShopHero = () => {
   return (
-    <div className="workshopHeroWrapper">
+    <div className="workshopHero">
       <div className="workshopSlogans">
-        <div className="workshopTitle">Workshops</div>
-        <div className="workshopTagLine">Get expert advice, from a person.</div>
+      <div>Workshops</div>
+      <div>Get expert advice, from a person.</div>
       </div>
     </div>
   )

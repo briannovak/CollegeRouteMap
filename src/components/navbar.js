@@ -1,7 +1,10 @@
 import React from "react";
 import { NavLink } from 'react-router-dom';
+import SuperHeader from './superHeader';
 
-const NavBar = ({update, click}) => {
+
+
+const NavBar = ({update, click, nav, superHeaderClass, subNav}) => {
 
 const burgerClick = data => {
   if(data){
@@ -13,23 +16,27 @@ const burgerClick = data => {
   }
 update(data)
 }
-
+// <img className="logoImage" src="https://i.imgur.com/LJoHOxg.jpg" title="source: imgur.com" /> Promoting Student Success
 
   return (
-    <div className="navbar">
+    <div className={nav}>
+    <SuperHeader superHeaderClass={superHeaderClass}/>
+    <div className={subNav}>
       <div className="navBurger fa fa-bars fa-3x" aria-hidden="true"
         onClick={burgerClick.bind(this, click)}
       ></div>
-      <NavLink exact to="/" className="logo"><img className="logoImage" src="https://i.imgur.com/LJoHOxg.jpg" title="source: imgur.com" /></NavLink>
-      <div className="navSlogan">Promoting Student Success</div>
+      <NavLink exact to="/" className="logo"></NavLink>
+      <div className="navSlogan"></div>
       <div className="navWhiteSpace"></div>
       <NavLink to="/workshops" className="navWorkShops graySwitch">Workshops</NavLink>
       <NavLink to="/services" className="navServices graySwitch">Services</NavLink>
       <NavLink to="/resources" className="navResources graySwitch">Resources</NavLink>
       <NavLink to="/about" className="navAbout graySwitch">About</NavLink>
-      <div className="navContact graySwitch">Contact</div>
-      <a target="_blank" href="https://collegeroutemap.customcollegeplan.com/" className="navCurrentStudents graySwitch">Current Students</a>
+      <NavLink to="/contact" className="navContact graySwitch">Contact</NavLink>
+      <a target="_blank" href="https://collegeroutemap.collegeplannerpro.com/" className="navCurrentStudents graySwitch">Current Students</a>
     </div>
+
+  </div>
   )
 
 }
