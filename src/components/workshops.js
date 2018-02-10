@@ -6,13 +6,14 @@ import Hero from './hero'
 import Problem from './problem'
 import WorkShopContent from './workshopContent'
 
+//<WorkShopContent />
+
 const Workshops = () => {
   return(
     <div>
       <WorkShopHero />
-      <WorkShopContent />
+
       <Contact />
-      <Footer />
     </div>
   )
 }

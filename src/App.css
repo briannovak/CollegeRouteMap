@@ -3129,7 +3129,7 @@
     display:grid;
     position: relative;
     top: 0;
-    grid-template-columns: 15% 5% 12% 13% 10% 10% 10% 10% 15%;
+    grid-template-columns: 15% 5% 12% 13% 10% 10% 10% 25%;
     height: 75px;
     background-color: white;
     border-bottom: 1px solid black;

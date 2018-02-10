@@ -15,7 +15,7 @@ import About from './components/about'
 import SuperHeader from './components/superHeader'
 import Contact from './components/contact'
 
-
+//<Route path="/resources" component={Resources}/>
 
 class App extends Component {
   constructor(props){
@@ -94,7 +94,7 @@ class App extends Component {
           console.log("update clicks"), this.setState({...this.state, clicked:clk});}}/>
           <Route exact path="/workshops" component={Workshops} workshopHeroWrapper={this.state.workshop}/>
           <Route path="/services" component={Services}/>
-          <Route path="/resources" component={Resources}/>
+
           <Route path="/about" component={About}/>
           <Route exact path="/" component={Landing}/>
           <Route path="/contact" component={Contact}/>

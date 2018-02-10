@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from 'react-router-dom';
 import SuperHeader from './superHeader';
 
-
+//<NavLink to="/resources" className="navResources graySwitch">Resources</NavLink>
 
 const NavBar = ({update, click, nav, superHeaderClass, subNav}) => {
 
@@ -16,7 +16,6 @@ const burgerClick = data => {
   }
 update(data)
 }
-// <img className="logoImage" src="https://i.imgur.com/LJoHOxg.jpg" title="source: imgur.com" /> Promoting Student Success
 
   return (
     <div className={nav}>
@@ -30,7 +29,6 @@ update(data)
       <div className="navWhiteSpace"></div>
       <NavLink to="/workshops" className="navWorkShops graySwitch">Workshops</NavLink>
       <NavLink to="/services" className="navServices graySwitch">Services</NavLink>
-      <NavLink to="/resources" className="navResources graySwitch">Resources</NavLink>
       <NavLink to="/about" className="navAbout graySwitch">About</NavLink>
       <NavLink to="/contact" className="navContact graySwitch">Contact</NavLink>
       <a target="_blank" href="https://collegeroutemap.collegeplannerpro.com/" className="navCurrentStudents graySwitch">Current Students</a>
