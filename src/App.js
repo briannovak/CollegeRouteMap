@@ -44,7 +44,7 @@ class App extends Component {
         header:'hide',
         nav:"navbar fixed",
         workshop:"workshopHeroWrapper scroll",
-        subNav:"subNav noBorderTop",
+        subNav:"navbar noBorderTop",
         backgroundImage:"heroWrapper backgroundPosition",
         app:"App marginTop"} )
     } else if (window.scrollY>1&&window.scrollY<15){
@@ -92,7 +92,7 @@ class App extends Component {
           console.log("update clicks"), this.setState({...this.state, clicked:clk});}}/>
         <MobileNav click={this.state.clicked} update={clk => {
           console.log("update clicks"), this.setState({...this.state, clicked:clk});}}/>
-          <Route path="/workshops" component={Workshops} workshopHeroWrapper={this.state.workshop}/>
+          <Route exact path="/workshops" component={Workshops} workshopHeroWrapper={this.state.workshop}/>
           <Route path="/services" component={Services}/>
           <Route path="/resources" component={Resources}/>
           <Route path="/about" component={About}/>
