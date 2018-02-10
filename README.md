@@ -10,16 +10,13 @@ The scroll event for the super header is defined in the App.js page and determin
 ##Quirks
 With the screen at greater than 1024 px scroll down so the superheader disappears and then make the browser smaller and the navbar will collapse appropriately.
 
-##
-Contact Forms
+## Contact Forms
 I planned on using formspree.io for the contact forms to in order to avoid writing a back end for now.
 
-##
-Mobile Nav
+## Mobile Nav
 The components for a mobile nav have been created and did work; however, making the super header hide and show along with the mobile nav has not been completed.
 
-##
-Payments
+## Payments
 In the worksops page we discussed forwarding to either square or paypal in order to sign up and pay for the workshop
 
 ##CSS
